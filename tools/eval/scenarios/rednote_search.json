@@ -1,0 +1,38 @@
+{
+  "name": "rednote_search",
+  "mode": "read_only",
+  "manual": false,
+  "start_condition": {
+    "surface": "Home",
+    "note": "Human must establish this start condition; the runner never resets Home. Public rednote results for IELTS speaking. Check up to three result cards without engagement."
+  },
+  "steps": [
+    {
+      "tool_name": "xiaohongshu.search",
+      "args": {
+        "query": "IELTS speaking"
+      }
+    },
+    {
+      "tool_name": "public.read_results",
+      "args": {}
+    }
+  ],
+  "success": {
+    "receipt_status": [
+      "completed"
+    ],
+    "visible_check_note": "Public rednote results for IELTS speaking. Check up to three result cards without engagement."
+  },
+  "max_seconds": 180,
+  "never": [
+    "send",
+    "post",
+    "like",
+    "follow",
+    "DM",
+    "account_switch",
+    "login_credentials",
+    "private_history"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "app": "TikTok",
+  "control": "public_search_form_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.35,
+    0.03888888888888889
+  ],
+  "anchors": [
+    "top",
+    "videos",
+    "photos",
+    "back"
+  ],
+  "target": "magnifier",
+  "patches": {
+    "top": {
+      "box": [
+        37,
+        75,
+        83,
+        101
+      ],
+      "file": "results-top.png"
+    },
+    "videos": {
+      "box": [
+        132,
+        75,
+        193,
+        98
+      ],
+      "file": "results-videos.png"
+    },
+    "back": {
+      "box": [
+        12,
+        30,
+        31,
+        57
+      ],
+      "file": "results-back.png"
+    },
+    "magnifier": {
+      "box": [
+        56,
+        30,
+        78,
+        57
+      ],
+      "file": "results-magnifier.png"
+    },
+    "photos": {
+      "box": [
+        227,
+        75,
+        286,
+        98
+      ],
+      "file": "results-photos.png"
+    }
+  },
+  "pointer_region": [
+    0,
+    0.024,
+    1,
+    0.095
+  ]
+}

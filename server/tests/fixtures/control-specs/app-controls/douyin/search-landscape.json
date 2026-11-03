@@ -1,0 +1,67 @@
+{
+  "app": "Douyin",
+  "control": "public_search_entry",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "orientation": "landscape",
+  "center": [
+    0.915,
+    0.073
+  ],
+  "anchors": [
+    "home",
+    "create",
+    "recommended"
+  ],
+  "target": "search",
+  "patches": {
+    "home": {
+      "box": [
+        466,
+        1003,
+        522,
+        1037
+      ],
+      "file": "landscape-entry-home.png",
+      "matching": "white_glyph_edges"
+    },
+    "create": {
+      "box": [
+        794,
+        994,
+        851,
+        1041
+      ],
+      "file": "landscape-entry-create.png",
+      "matching": "white_glyph_edges"
+    },
+    "recommended": {
+      "box": [
+        1009,
+        65,
+        1053,
+        100
+      ],
+      "file": "landscape-entry-recommended.png",
+      "matching": "white_glyph_edges"
+    },
+    "search": {
+      "box": [
+        1399,
+        66,
+        1419,
+        87
+      ],
+      "file": "landscape-entry-search.png",
+      "matching": "gray_search_glyph_edges"
+    }
+  },
+  "pointer_region": [
+    0.84,
+    0.048,
+    0.99,
+    0.098
+  ]
+}

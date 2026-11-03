@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Local config and secrets
+.env
+hardware/hid_bridge/secrets.h
+hardware/hid_bridge_ble_c3/secrets.h
+
+# Build output
+hardware/build/
+hardware/hid_bridge/build/
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+hardware/hid_bridge_ble_c3/build/
+build_ble/
+
+# Local tools, private runtime and evidence
+work/
+outputs/
+upstream-main/
+backups/
+runtime/
+devices/**/.env
+devices/**/secrets.h
+devices/**/build/
+.migration-in-progress
+
+/devices/iphone/agent-device-signing.env
+
+/.tmp/agent-device-observer/
+
+/.tmp/agent-device-observer-compile-check/
+
+# Dependencies and per-tool build caches
+node_modules/
+.tmp/
+
+# Public snapshot: device-local identities and captures never ship
+/devices/**/board.json
+/devices/**/*.log
+/devices/**/app-controls/
+/devices/**/home-icons/
+/tools/wda/upstream.json
+
+# Ode public distribution
+.env.*
+!.env.example
+!**/*.env.example
+**/secrets.h
+*.log
+companion-ui/dist/
+legacy/work/
+deploy/cloudflared/*.json
+deploy/cloudflared/config.yml
+
+# Local release handoff (never exported)
+/release-report/

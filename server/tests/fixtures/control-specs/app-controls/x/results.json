@@ -1,0 +1,56 @@
+{
+  "app": "X",
+  "control": "public_search_form_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.4647887323943662,
+    0.05
+  ],
+  "anchors": [
+    "top",
+    "latest",
+    "home"
+  ],
+  "target": "magnifier",
+  "patches": {
+    "top": {
+      "box": [
+        35,
+        89,
+        85,
+        121
+      ],
+      "file": "results-top.png"
+    },
+    "latest": {
+      "box": [
+        166,
+        88,
+        222,
+        114
+      ],
+      "file": "results-latest.png"
+    },
+    "home": {
+      "box": [
+        30,
+        1019,
+        58,
+        1046
+      ],
+      "file": "results-home.png"
+    },
+    "magnifier": {
+      "box": [
+        68,
+        43,
+        88,
+        66
+      ],
+      "file": "results-magnifier.png"
+    }
+  }
+}

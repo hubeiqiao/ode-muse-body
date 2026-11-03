@@ -1,0 +1,122 @@
+{
+  "Calculator": {
+    "key": "calculator",
+    "path": "app-skills/calculator/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "Safari": {
+    "key": "safari",
+    "path": "app-skills/safari/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "Notes": {
+    "key": "notes",
+    "path": "app-skills/notes/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "Settings": {
+    "key": "settings",
+    "path": "app-skills/settings/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "X": {
+    "key": "x",
+    "path": "app-skills/x/CARD.md",
+    "scope": "public_search"
+  },
+  "Instagram": {
+    "key": "instagram",
+    "path": "app-skills/instagram/CARD.md",
+    "scope": "public_search"
+  },
+  "rednote": {
+    "key": "xiaohongshu",
+    "path": "app-skills/xiaohongshu/CARD.md",
+    "scope": "public_search"
+  },
+  "Joe Speaking": {
+    "key": "example_creator",
+    "path": "app-skills/example_creator/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "TikTok": {
+    "key": "tiktok",
+    "path": "app-skills/tiktok/CARD.md",
+    "scope": "public_search"
+  },
+  "Douyin": {
+    "key": "douyin",
+    "path": "app-skills/douyin/CARD.md",
+    "scope": "public_search"
+  },
+  "Bilibili": {
+    "key": "bilibili",
+    "path": "app-skills/bilibili/CARD.md",
+    "scope": "public_search"
+  },
+  "LinkedIn": {
+    "key": "linkedin",
+    "path": "app-skills/linkedin/CARD.md",
+    "scope": "public_search"
+  },
+  "Reddit": {
+    "key": "reddit",
+    "path": "app-skills/reddit/CARD.md",
+    "scope": "public_search"
+  },
+  "YouTube": {
+    "key": "youtube",
+    "path": "app-skills/youtube/CARD.md",
+    "scope": "public_search"
+  },
+  "Google Maps": {
+    "key": "google_maps",
+    "path": "app-skills/google_maps/CARD.md",
+    "scope": "public_search"
+  },
+  "Discord": {
+    "key": "discord",
+    "path": "app-skills/discord/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "Muse": {
+    "key": "muse",
+    "path": "app-skills/muse/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "App Store": {
+    "key": "app_store",
+    "path": "app-skills/app_store/CARD.md",
+    "scope": "public_search"
+  },
+  "Chrome": {
+    "key": "chrome",
+    "path": "app-skills/chrome/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "ChatGPT": {
+    "key": "chatgpt",
+    "path": "app-skills/chatgpt/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "Grok Bot": {
+    "key": "grok",
+    "path": "app-skills/grok/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "Camera": {
+    "key": "camera",
+    "path": "app-skills/camera/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "Gmail": {
+    "key": "gmail",
+    "path": "app-skills/gmail/CARD.md",
+    "scope": "registered_tools_only"
+  },
+  "Threads": {
+    "key": "threads",
+    "path": "app-skills/threads/CARD.md",
+    "scope": "registered_tools_only"
+  }
+}

@@ -1,0 +1,30 @@
+Handsy AI / ESP32 iPhone Agent
+Copyright (c) 2026 Henry Yuan
+https://github.com/onehumanbeing/esp32-iphone-agent
+
+This project is licensed under the MIT License (see LICENSE).
+
+Attribution
+-----------
+If you use, copy, modify, port, or build on any part of this project
+(code, firmware, iOS app, prompts, hardware design, or documentation),
+you must keep the copyright notice above and the LICENSE file in your
+copy, as the MIT License requires.
+
+We also ask that any public project, demo, video, or post built on this
+work credits it visibly, for example:
+
+  Based on ESP32 iPhone Agent by Henry Yuan
+  https://github.com/onehumanbeing/esp32-iphone-agent
+
+Local dictation parser reference:
+The literal text-span approach in server/hidagent/command_input.py was informed by
+savka777/jev-use, Copyright (c) 2026 Savva Bojko (MIT).
+Source: https://github.com/savka777/jev-use/blob/main/Sources/JevCore/CommandInput.swift
+The reviewed reference and original license are retained in third_party/jev-use/.
+
+Milo companion additions: assistant-ui (MIT), Hermes Agent memory component by Nous Research (MIT), pinned c714c42431e518fcd1c8870eff5c667d5de33b57. Hermes license in server/hidagent/hermes_memory/LICENSE. Dependency notices retained in companion-ui/package-lock.json and source package licenses.
+
+Selected Mobile Harness App Cards documentation and conventions: droidrun/mobile-harness, commit a8c7270d4c44d7a9ccbcd07983c16e1545d71fa0. MIT license and unchanged reference documents are preserved under third_party/mobile-harness-app-cards. No Mobile Harness runtime or USB iOS driver is bundled.
+
+Twitter text-length validation reuses twitter-text 3.1.0, Copyright2011 Twitter, Inc., Apache License2.0. See third_party/licenses/twitter-text-LICENSE.txt and https://github.com/twitter/twitter-text.

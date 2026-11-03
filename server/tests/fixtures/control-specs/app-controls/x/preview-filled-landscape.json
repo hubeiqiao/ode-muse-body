@@ -1,0 +1,46 @@
+{
+  "app": "X",
+  "control": "preview_filled_composer",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "center": [
+    0.7491,
+    0.8074
+  ],
+  "anchors": [
+    "reply_enabled",
+    "tab_search"
+  ],
+  "target": "expand",
+  "patches": {
+    "reply_enabled": {
+      "box": [
+        1163,
+        910,
+        1265,
+        960
+      ],
+      "file": "preview-filled-landscape-reply_enabled.png"
+    },
+    "tab_search": {
+      "box": [
+        338,
+        988,
+        378,
+        1028
+      ],
+      "file": "preview-filled-landscape-tab_search.png"
+    },
+    "expand": {
+      "box": [
+        1214,
+        854,
+        1252,
+        890
+      ],
+      "file": "preview-filled-landscape-expand.png"
+    }
+  }
+}

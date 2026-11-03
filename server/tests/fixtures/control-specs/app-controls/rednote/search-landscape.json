@@ -1,0 +1,63 @@
+{
+  "app": "rednote",
+  "control": "public_search_entry",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "orientation": "landscape",
+  "center": [
+    0.895,
+    0.057
+  ],
+  "anchors": [
+    "discover",
+    "home",
+    "create"
+  ],
+  "target": "search",
+  "patches": {
+    "discover": {
+      "box": [
+        780,
+        48,
+        840,
+        87
+      ],
+      "file": "landscape-entry-discover.png"
+    },
+    "home": {
+      "box": [
+        124,
+        1006,
+        209,
+        1042
+      ],
+      "file": "landscape-entry-home.png"
+    },
+    "create": {
+      "box": [
+        794,
+        1000,
+        853,
+        1043
+      ],
+      "file": "landscape-entry-create.png"
+    },
+    "search": {
+      "box": [
+        1344,
+        48,
+        1376,
+        78
+      ],
+      "file": "landscape-entry-search.png"
+    }
+  },
+  "pointer_region": [
+    0.808,
+    0.033,
+    0.988,
+    0.082
+  ]
+}

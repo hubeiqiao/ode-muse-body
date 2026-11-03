@@ -1,0 +1,38 @@
+{
+  "name": "reddit_chrome_search",
+  "mode": "read_only",
+  "manual": false,
+  "start_condition": {
+    "surface": "Home",
+    "note": "Human must establish this start condition; the runner never resets Home. Chrome public Reddit search results for IELTS. Do not assume native login or account identity."
+  },
+  "steps": [
+    {
+      "tool_name": "reddit.search",
+      "args": {
+        "query": "IELTS"
+      }
+    },
+    {
+      "tool_name": "public.read_results",
+      "args": {}
+    }
+  ],
+  "success": {
+    "receipt_status": [
+      "completed"
+    ],
+    "visible_check_note": "Chrome public Reddit search results for IELTS. Do not assume native login or account identity."
+  },
+  "max_seconds": 180,
+  "never": [
+    "send",
+    "post",
+    "like",
+    "follow",
+    "DM",
+    "account_switch",
+    "login_credentials",
+    "private_history"
+  ]
+}

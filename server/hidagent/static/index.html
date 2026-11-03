@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>ESP32 iPhone / iPad Agent</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<!-- Top bar: what is connected, which models drive it, language, and the stop that is always in reach. -->
+<header class="topbar">
+  <h1 class="brand">ESP32 iPhone / iPad Agent</h1>
+  <ul class="chips" aria-label="Status">
+    <li class="chip" data-chip="device"><i aria-hidden="true"></i><span data-i18n="chipDevice"></span></li>
+    <li class="chip" data-chip="screen"><i aria-hidden="true"></i><span data-i18n="chipScreen"></span></li>
+    <li class="chip" data-chip="calibrated"><i aria-hidden="true"></i><span data-i18n="chipCalibrated"></span></li>
+  </ul>
+  <div class="models">
+    <div><span data-i18n="decision"></span><b id="m-planner"></b><small id="m-planner-s"></small></div>
+    <div><span data-i18n="executor"></span><b id="m-actor"></b><small id="m-actor-s"></small></div>
+  </div>
+  <div class="prefs">
+    <button class="motion" id="motion"></button>
+    <div class="lang" id="lang" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="zh">中文</button></div>
+  </div>
+  <button class="estop" id="estop" aria-keyshortcuts="Escape" data-i18n-title="estopHint"><span data-i18n="estop"></span><kbd>Esc</kbd></button>
+</header>
+
+<main class="console">
+  <!-- Left: the live device on a dark stage, its controls, and the task composer. -->
+  <section class="workspace">
+    <div class="stage">
+      <div class="stage-head">
+        <p class="caption" id="caption" data-i18n="liveCaption"></p>
+        <p class="caption target-status" id="target-status" aria-live="polite"></p>
+      </div>
+      <div class="stage-body">
+        <div class="screen">
+          <img id="live" alt="">
+          <div class="hint" id="hint"><b data-i18n="waiting"></b><span id="hint-how" data-i18n="waitingHow"></span></div>
+        </div>
+      </div>
+      <div class="toolbar" role="toolbar" data-i18n-aria="manual">
+        <div class="tool-group"><button data-post="/api/home" data-i18n="home"></button><button data-post="/api/back" data-i18n="back"></button><button id="cal" data-i18n="calibrate"></button></div>
+        <div class="tool-group target-mode"><label for="target-mode" data-i18n="targetMode"></label><select id="target-mode">
+          <option value="auto" data-i18n="targetAuto"></option><option value="ipad">iPad</option><option value="iphone">iPhone</option>
+        </select></div>
+        <div class="tool-group grow"><input id="text" data-i18n-ph="typePh"><button id="type" data-i18n="type"></button></div>
+        <div class="tool-group"><input id="key" class="key-input" data-i18n-ph="keyPh"><button id="press" data-i18n="press"></button></div>
+      </div>
+    </div>
+
+    <div class="composer">
+      <ol class="setup" id="setup">
+        <li data-key="device"><b data-i18n="s1"></b><span data-i18n="s1d"></span></li>
+        <li data-key="screen"><b data-i18n="s2"></b><span data-i18n="s2d"></span></li>
+        <li data-key="calibrated"><b data-i18n="s3"></b><span data-i18n="s3d"></span></li>
+      </ol>
+      <div class="task">
+        <label class="sr-only" for="task" data-i18n="taskLabel"></label>
+        <textarea id="task" rows="2" data-i18n-ph="taskPh"></textarea>
+        <div class="task-actions">
+          <p class="msg" id="msg"></p>
+          <button id="clear" data-i18n="clear" hidden></button>
+          <button id="stop" data-i18n="stop" hidden></button>
+          <button class="primary" id="run" data-i18n="start"></button>
+        </div>
+      </div>
+      <div class="suggest"><span class="suggest-label" data-i18n="examplesLabel"></span><div class="examples" id="examples"></div></div>
+    </div>
+
+  </section>
+
+  <!-- Right: one panel, three views. Switching views is local UI state only. -->
+  <aside class="side">
+    <div class="tabs" role="tablist" data-i18n-aria="panels">
+      <button role="tab" id="tab-log" data-tab="log" aria-controls="panel-log"><span data-i18n="log"></span><span class="live-dot" id="live-dot"></span></button>
+      <button role="tab" id="tab-steps" data-tab="steps" aria-controls="panel-steps"><span data-i18n="stepsTab"></span><span class="count" id="steps-count"></span></button>
+      <button role="tab" id="tab-voice" data-tab="voice" aria-controls="panel-voice"><span data-i18n="voiceTab"></span></button>
+    </div>
+
+    <div class="panel log" id="panel-log" role="tabpanel" aria-labelledby="tab-log">
+      <ol id="log"></ol>
+      <div class="empty"><b data-i18n="logEmpty"></b><span data-i18n="logEmptyHow"></span></div>
+    </div>
+
+    <div class="panel steps" id="panel-steps" role="tabpanel" aria-labelledby="tab-steps" hidden>
+      <div class="summary" id="summary" hidden>
+        <div><b id="st-state"></b><span data-i18n="status"></span></div>
+        <div><b id="st-steps"></b><span data-i18n="actions"></span></div>
+        <div><b id="st-time"></b><span data-i18n="total"></span></div>
+        <div><b id="st-step"></b><span data-i18n="perAction"></span></div>
+      </div>
+      <details class="plan" id="plan" hidden open><summary data-i18n="plan"></summary><ol id="plan-list"></ol></details>
+      <div class="wall" id="wall"></div>
+      <div class="empty"><b data-i18n="stepsEmpty"></b><span data-i18n="stepsEmptyHow"></span></div>
+    </div>
+
+    <div class="panel voice" id="panel-voice" role="tabpanel" aria-labelledby="tab-voice" hidden>
+      <section class="voice-panel" aria-label="Gemini Live voice">
+        <div class="voice-head"><strong>Gemini 3.8 Live</strong><p id="voice-status" role="status" aria-live="polite"></p></div>
+        <div class="row">
+          <button id="voice-start" class="primary" data-i18n="voiceStart">Start voice</button>
+          <button id="voice-mute" hidden>Mute</button>
+          <button id="voice-end" hidden data-i18n="voiceEnd">End voice</button>
+          <button id="voice-camera-start" hidden data-i18n="voiceCameraStart">Open camera</button>
+        </div>
+        <div id="voice-transcript" class="voice-transcript" aria-label="Voice transcript"></div>
+        <p class="voice-path" data-i18n="voicePath">Voice → Gemini Live → Jev / Haiku → ESP32 → iPhone</p>
+      </section>
+      <details class="exploration-panel" id="exploration-panel" hidden>
+        <summary id="exploration-title"></summary>
+        <p id="exploration-hint"></p>
+        <label id="exploration-goal-label" for="exploration-goal"></label>
+        <textarea id="exploration-goal" rows="2" maxlength="1000"></textarea>
+        <div class="row"><button id="exploration-start" disabled>Start exploring</button><button id="exploration-stop" hidden>Stop this round</button></div>
+        <p id="exploration-status" role="status" aria-live="polite"></p>
+        <p id="exploration-proposal"></p>
+        <div id="exploration-results"></div>
+      </details>
+
+    </div>
+    <footer class="foot">
+      <p class="workflow" data-i18n="workflow"></p>
+      <p class="credit">ESP32 iPhone Agent by Henry Yuan · MIT License</p>
+    </footer>
+  </aside>
+</main>
+
+<dialog id="zoom"><div class="zoombox"><img id="zoom-img" alt=""><div class="overlay" id="zoom-overlay"></div></div><p id="zoom-text"></p></dialog>
+
+<script src="/static/i18n.js"></script>
+<script src="/static/app.js"></script>
+<script src="/static/exploration.js"></script>
+<script src="/static/voice-intents.js"></script>
+<script src="/static/voice.js"></script>
+</body>
+</html>

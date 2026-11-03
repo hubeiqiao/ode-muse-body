@@ -1,0 +1,56 @@
+{
+  "app": "X",
+  "control": "preview_empty_composer",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "center": [
+    0.2956,
+    0.8074
+  ],
+  "anchors": [
+    "reply_disabled",
+    "media",
+    "gif"
+  ],
+  "target": "placeholder",
+  "patches": {
+    "reply_disabled": {
+      "box": [
+        1163,
+        910,
+        1265,
+        960
+      ],
+      "file": "preview-empty-landscape-reply_disabled.png"
+    },
+    "media": {
+      "box": [
+        382,
+        916,
+        420,
+        954
+      ],
+      "file": "preview-empty-landscape-media.png"
+    },
+    "gif": {
+      "box": [
+        452,
+        916,
+        492,
+        954
+      ],
+      "file": "preview-empty-landscape-gif.png"
+    },
+    "placeholder": {
+      "box": [
+        405,
+        854,
+        568,
+        890
+      ],
+      "file": "preview-empty-landscape-placeholder.png"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {checkedSourceFromReceipt,draftArguments,draftReviewText} from '../../companion-ui/src/sourceDraft.js';
+const receipt={server_instance:'current',request_id:'read_test_001',tool_name:'public.read_results',status:'completed',result:{verification_policy:'app_public_result_quotes',verification_passed:true,source_kind:'verified_search_snapshot',results:[{title_quote:'A short quotation'}],app:'X',query:'IELTS'}};
+const source=checkedSourceFromReceipt(receipt,'current');
+assert.equal(source.request_id,'read_test_001');
+assert.equal(checkedSourceFromReceipt(receipt,'another'),null);
+for(const change of [{historical:true},{status:'failed'},{tool_name:'x.search'},{request_id:null},{result:{...receipt.result,verification_passed:false}},{result:{...receipt.result,verification_policy:'old'}},{result:{...receipt.result,results:[]}}])assert.equal(checkedSourceFromReceipt({...receipt,...change},'current'),null);
+assert.deepEqual(draftArguments('brief',source,false),{goal:'brief'});
+assert.deepEqual(draftArguments('brief',source,true),{goal:'brief',source_read_request_id:'read_test_001'});
+assert.throws(()=>draftArguments('brief',null,true));
+const formatted=draftReviewText({body:'Tentative draft.',source_evidence:{app:'X',query:'IELTS',results:[{title_quote:'Practice speaking',byline_quote:'Public channel'}]}});
+assert.match(formatted,/Not published/);assert.match(formatted,/snapshot: X \/ IELTS/);assert.match(formatted,/not verified customer feedback/);assert.match(formatted,/interpretation needs review/);
+console.log('PASS: explicit checked-source selection, API-boot isolation, failed-source exclusion and review labels');

@@ -1,0 +1,46 @@
+{
+  "app": "X",
+  "control": "preview_profile_tab",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.688,
+    0.956
+  ],
+  "anchors": [
+    "brand",
+    "search_tab"
+  ],
+  "target": "profile",
+  "patches": {
+    "brand": {
+      "box": [
+        341,
+        31,
+        369,
+        61
+      ],
+      "file": "preview-profile-brand.png"
+    },
+    "search_tab": {
+      "box": [
+        120,
+        1020,
+        146,
+        1047
+      ],
+      "file": "preview-profile-search_tab.png"
+    },
+    "profile": {
+      "box": [
+        474,
+        1019,
+        503,
+        1048
+      ],
+      "file": "preview-profile-profile.png"
+    }
+  }
+}

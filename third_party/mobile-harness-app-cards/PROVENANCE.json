@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/droidrun/mobile-harness",
+  "commit": "a8c7270d4c44d7a9ccbcd07983c16e1545d71fa0",
+  "license": "MIT",
+  "integration": "Documentation and app-card convention only. No mobilerun runtime, USB or native Runner installed.",
+  "sha256": {
+    "LICENSE": "de215a2914d50cb87fcab9e19efc856b9e600a68eefec5c63e284dae34977133",
+    "apps/index.md": "24b58ae6139b652efa58f2fed4fbca33ce19090c68b9b79b07fbe548d8061c84",
+    "core/memory/GUIDE.md": "1ea8ff5c5d655b8f9cf069c16b924b5bdee6a1afb56c3af969a4997e8477e43e",
+    "apps/ios/com.apple.Preferences/CARD.md": "5553d627d54ff4bfbcecd2acf72e26d5e08b7e92763264cdf0be32decdcfa7f8",
+    "apps/ios/com.apple.mobilesafari/CARD.md": "f9f15fc32e72904ea8b19d621eebdd43bdf8536b7264f3b86160e34b86d5bbed"
+  }
+}

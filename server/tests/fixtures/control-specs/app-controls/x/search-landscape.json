@@ -1,0 +1,87 @@
+{
+  "app": "X",
+  "control": "public_search_entry",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "orientation": "landscape",
+  "center": [
+    0.2174969623329283,
+    0.926
+  ],
+  "anchors": [
+    "home",
+    "lists",
+    "bookmarks"
+  ],
+  "target": "search",
+  "patches": {
+    "home": {
+      "box": [
+        153,
+        988,
+        194,
+        1026
+      ],
+      "file": "landscape-entry-home.png"
+    },
+    "lists": {
+      "box": [
+        1267,
+        988,
+        1308,
+        1026
+      ],
+      "file": "landscape-entry-lists.png"
+    },
+    "bookmarks": {
+      "box": [
+        1453,
+        988,
+        1494,
+        1026
+      ],
+      "file": "landscape-entry-bookmarks.png"
+    },
+    "search": {
+      "box": [
+        337,
+        988,
+        378,
+        1026
+      ],
+      "file": "landscape-entry-search.png"
+    },
+    "post_back": {
+      "box": [
+        16,
+        52,
+        56,
+        90
+      ],
+      "file": "reply-bar-landscape-back.png"
+    },
+    "post_title": {
+      "box": [
+        790,
+        54,
+        856,
+        90
+      ],
+      "file": "reply-bar-landscape-title.png"
+    }
+  },
+  "pointer_region": [
+    0.197,
+    0.91,
+    0.237,
+    0.96
+  ],
+  "blockers": [
+    [
+      "post_back",
+      "post_title"
+    ]
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "app": "X",
+  "control": "preview_x_tab_bar",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "center": [
+    0.7825,
+    0.9333
+  ],
+  "anchors": [
+    "tab_search",
+    "tab_bookmarks"
+  ],
+  "target": "tab_lists",
+  "patches": {
+    "tab_search": {
+      "box": [
+        338,
+        988,
+        378,
+        1028
+      ],
+      "file": "tab-bar-landscape-tab_search.png"
+    },
+    "tab_bookmarks": {
+      "box": [
+        1454,
+        988,
+        1494,
+        1028
+      ],
+      "file": "tab-bar-landscape-tab_bookmarks.png"
+    },
+    "tab_lists": {
+      "box": [
+        1268,
+        988,
+        1308,
+        1028
+      ],
+      "file": "tab-bar-landscape-tab_lists.png"
+    }
+  }
+}

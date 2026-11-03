@@ -1,0 +1,56 @@
+{
+  "app": "Instagram",
+  "control": "public_query_text",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.5,
+    0.05
+  ],
+  "anchors": [
+    "query_back",
+    "query_glass",
+    "query_home"
+  ],
+  "target": "query_clear",
+  "patches": {
+    "query_back": {
+      "box": [
+        83,
+        41,
+        105,
+        66
+      ],
+      "file": "query_back.png"
+    },
+    "query_glass": {
+      "box": [
+        160,
+        42,
+        181,
+        65
+      ],
+      "file": "query_glass.png"
+    },
+    "query_home": {
+      "box": [
+        19,
+        366,
+        51,
+        397
+      ],
+      "file": "query_home.png"
+    },
+    "query_clear": {
+      "box": [
+        523,
+        43,
+        544,
+        65
+      ],
+      "file": "query_clear.png"
+    }
+  }
+}

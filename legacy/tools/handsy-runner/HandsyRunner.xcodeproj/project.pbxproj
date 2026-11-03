@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07FADB9F08E3E00CEFBC8AA6 /* HandsyRunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1B576C7CD96A47184F8FAF /* HandsyRunnerTests.swift */; };
+		59E7471CD6D2F802FC84FA25 /* HandsyHostApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9934376360FEF5553F60149D /* HandsyHostApp.swift */; };
+		858A3C0DFE5F98903B76C293 /* HTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD937B226BD7753FE88E78 /* HTTPServer.swift */; };
+		8BF86416C76DBF6B54CF9CAB /* XCTestAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA683CC70FC784D6A9E4B3C8 /* XCTestAutomation.swift */; };
+		9F9013402C85719A9544EE8C /* ExceptionBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E1070956CBE302B55715 /* ExceptionBridge.m */; };
+		F1AB4739FF034940C2C14405 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6F8162C5C21F0C6F29C2AF /* Protocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A59545F0C3601DA0C56A9332 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD190283A7E69299AB5B4714 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCFCCF8FFE34F4838DDF8907;
+			remoteInfo = HandsyHost;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22D1E1070956CBE302B55715 /* ExceptionBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionBridge.m; sourceTree = "<group>"; };
+		29BF74724B9FA8AF3134D7E1 /* HandsyRunnerUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HandsyRunnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1B576C7CD96A47184F8FAF /* HandsyRunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsyRunnerTests.swift; sourceTree = "<group>"; };
+		6D4932F41F4A3B791259F9C7 /* HandsyHost.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HandsyHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9934376360FEF5553F60149D /* HandsyHostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsyHostApp.swift; sourceTree = "<group>"; };
+		BA6F8162C5C21F0C6F29C2AF /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		F06B6DB1DE3C359DC2F85363 /* ExceptionBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionBridge.h; sourceTree = "<group>"; };
+		F6CD937B226BD7753FE88E78 /* HTTPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServer.swift; sourceTree = "<group>"; };
+		FA683CC70FC784D6A9E4B3C8 /* XCTestAutomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestAutomation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		505E7A1064252011C919E5F2 /* HandsyRunnerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F06B6DB1DE3C359DC2F85363 /* ExceptionBridge.h */,
+				22D1E1070956CBE302B55715 /* ExceptionBridge.m */,
+				5D1B576C7CD96A47184F8FAF /* HandsyRunnerTests.swift */,
+				F6CD937B226BD7753FE88E78 /* HTTPServer.swift */,
+				BA6F8162C5C21F0C6F29C2AF /* Protocol.swift */,
+				FA683CC70FC784D6A9E4B3C8 /* XCTestAutomation.swift */,
+			);
+			path = HandsyRunnerUITests;
+			sourceTree = "<group>";
+		};
+		6255CB5C34615831986E2FAE = {
+			isa = PBXGroup;
+			children = (
+				7232843399640B1C3B13E8CC /* HandsyHost */,
+				505E7A1064252011C919E5F2 /* HandsyRunnerUITests */,
+				C3A82675F832DE2B439F69D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7232843399640B1C3B13E8CC /* HandsyHost */ = {
+			isa = PBXGroup;
+			children = (
+				9934376360FEF5553F60149D /* HandsyHostApp.swift */,
+			);
+			path = HandsyHost;
+			sourceTree = "<group>";
+		};
+		C3A82675F832DE2B439F69D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D4932F41F4A3B791259F9C7 /* HandsyHost.app */,
+				29BF74724B9FA8AF3134D7E1 /* HandsyRunnerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE8D4CF5C64EDF48E7E78111 /* HandsyRunnerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60B6F664122608B4F79E1C65 /* Build configuration list for PBXNativeTarget "HandsyRunnerUITests" */;
+			buildPhases = (
+				8A5B6367F80B3A8D2A14A7EB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D9D9E96D9CE12C47FB6652D /* PBXTargetDependency */,
+			);
+			name = HandsyRunnerUITests;
+			packageProductDependencies = (
+			);
+			productName = HandsyRunnerUITests;
+			productReference = 29BF74724B9FA8AF3134D7E1 /* HandsyRunnerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FCFCCF8FFE34F4838DDF8907 /* HandsyHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1A8F3E141475C93DAE44000 /* Build configuration list for PBXNativeTarget "HandsyHost" */;
+			buildPhases = (
+				CD1065DA55CE297B52E1877F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HandsyHost;
+			packageProductDependencies = (
+			);
+			productName = HandsyHost;
+			productReference = 6D4932F41F4A3B791259F9C7 /* HandsyHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD190283A7E69299AB5B4714 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CE8D4CF5C64EDF48E7E78111 = {
+						DevelopmentTeam = "$(APPLE_DEVELOPMENT_TEAM)";
+						ProvisioningStyle = Automatic;
+						TestTargetID = FCFCCF8FFE34F4838DDF8907;
+					};
+					FCFCCF8FFE34F4838DDF8907 = {
+						DevelopmentTeam = "$(APPLE_DEVELOPMENT_TEAM)";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CE6E9E1CBD604C28371ADA70 /* Build configuration list for PBXProject "HandsyRunner" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 6255CB5C34615831986E2FAE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C3A82675F832DE2B439F69D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCFCCF8FFE34F4838DDF8907 /* HandsyHost */,
+				CE8D4CF5C64EDF48E7E78111 /* HandsyRunnerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A5B6367F80B3A8D2A14A7EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9013402C85719A9544EE8C /* ExceptionBridge.m in Sources */,
+				858A3C0DFE5F98903B76C293 /* HTTPServer.swift in Sources */,
+				07FADB9F08E3E00CEFBC8AA6 /* HandsyRunnerTests.swift in Sources */,
+				F1AB4739FF034940C2C14405 /* Protocol.swift in Sources */,
+				8BF86416C76DBF6B54CF9CAB /* XCTestAutomation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1065DA55CE297B52E1877F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E7471CD6D2F802FC84FA25 /* HandsyHostApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D9D9E96D9CE12C47FB6652D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCFCCF8FFE34F4838DDF8907 /* HandsyHost */;
+			targetProxy = A59545F0C3601DA0C56A9332 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B5555CD00D1B24EEA3BC81E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "$(APPLE_DEVELOPMENT_TEAM)";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		27DFC6B2CBE8C0C9E9AD9CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local HandsyRunner automation on the trusted LAN.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.handsy.runner;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = HandsyRunnerUITests/ExceptionBridge.h;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HandsyHost;
+			};
+			name = Release;
+		};
+		2945CB280FE76A026E152DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local HandsyRunner automation on the trusted LAN.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.handsy.runner;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = HandsyRunnerUITests/ExceptionBridge.h;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HandsyHost;
+			};
+			name = Debug;
+		};
+		42CF0EDF05854D623DA05ABE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local HandsyRunner automation on the trusted LAN.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.handsy.host;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A48CCE25EF8141C9EBD58207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "$(APPLE_DEVELOPMENT_TEAM)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		E77798257C62EE61AC72114C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Local HandsyRunner automation on the trusted LAN.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.handsy.host;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60B6F664122608B4F79E1C65 /* Build configuration list for PBXNativeTarget "HandsyRunnerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2945CB280FE76A026E152DEE /* Debug */,
+				27DFC6B2CBE8C0C9E9AD9CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CE6E9E1CBD604C28371ADA70 /* Build configuration list for PBXProject "HandsyRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A48CCE25EF8141C9EBD58207 /* Debug */,
+				1B5555CD00D1B24EEA3BC81E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E1A8F3E141475C93DAE44000 /* Build configuration list for PBXNativeTarget "HandsyHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E77798257C62EE61AC72114C /* Debug */,
+				42CF0EDF05854D623DA05ABE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD190283A7E69299AB5B4714 /* Project object */;
+}

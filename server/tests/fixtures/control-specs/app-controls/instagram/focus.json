@@ -1,0 +1,62 @@
+{
+  "app": "Instagram",
+  "control": "public_search_form_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.47,
+    0.05
+  ],
+  "anchors": [
+    "bookmark",
+    "home_outline",
+    "explore_reels"
+  ],
+  "target": "query_entry",
+  "patches": {
+    "bookmark": {
+      "box": [
+        570,
+        38,
+        598,
+        70
+      ],
+      "file": "bookmark.png"
+    },
+    "home_outline": {
+      "box": [
+        19,
+        366,
+        51,
+        397
+      ],
+      "file": "home_outline.png"
+    },
+    "explore_reels": {
+      "box": [
+        19,
+        418,
+        51,
+        449
+      ],
+      "file": "explore_reels.png"
+    },
+    "query_entry": {
+      "box": [
+        116,
+        32,
+        556,
+        75
+      ],
+      "file": "query_entry.png"
+    }
+  },
+  "pointer_region": [
+    0.11,
+    0.025,
+    0.8,
+    0.085
+  ]
+}

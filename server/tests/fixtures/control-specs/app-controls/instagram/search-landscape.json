@@ -1,0 +1,63 @@
+{
+  "app": "Instagram",
+  "control": "public_search_entry",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "orientation": "landscape",
+  "center": [
+    0.031591737545565005,
+    0.5
+  ],
+  "anchors": [
+    "home",
+    "reels",
+    "create"
+  ],
+  "target": "search",
+  "patches": {
+    "home": {
+      "box": [
+        31,
+        276,
+        73,
+        318
+      ],
+      "file": "landscape-entry-home.png"
+    },
+    "reels": {
+      "box": [
+        31,
+        356,
+        73,
+        398
+      ],
+      "file": "landscape-entry-reels.png"
+    },
+    "create": {
+      "box": [
+        31,
+        681,
+        73,
+        723
+      ],
+      "file": "landscape-entry-create.png"
+    },
+    "search": {
+      "box": [
+        30,
+        519,
+        74,
+        561
+      ],
+      "file": "landscape-entry-search.png"
+    }
+  },
+  "pointer_region": [
+    0.017,
+    0.48,
+    0.05,
+    0.525
+  ]
+}

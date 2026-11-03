@@ -1,0 +1,714 @@
+{
+ "fixture_base_commit": "e1a49e3d70bb42d1fad95a8f07a075d9d2c485c8",
+ "server_instance": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+ "missions": {
+  "enabled": true
+ },
+ "tools": [
+  {
+   "name": "calculator.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "safari.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "notes.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "settings.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "x.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "instagram.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "xiaohongshu.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "example_creator.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "tiktok.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "douyin.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "bilibili.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "linkedin.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "reddit.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "youtube.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "google_maps.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "discord.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "muse.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "app_store.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "chrome.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "grok.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "chatgpt.open",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "calculator.calculate",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "left": {
+      "maximum": 999999,
+      "minimum": 0,
+      "title": "Left",
+      "type": "integer"
+     },
+     "right": {
+      "maximum": 999999,
+      "minimum": 0,
+      "title": "Right",
+      "type": "integer"
+     },
+     "operator": {
+      "pattern": "^(add|subtract|multiply)$",
+      "title": "Operator",
+      "type": "string"
+     }
+    },
+    "required": [
+     "left",
+     "right",
+     "operator"
+    ],
+    "title": "CalculateArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "x.prepare_draft",
+   "effect": "local_draft",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "source_read_request_id": {
+      "anyOf": [
+       {
+        "maxLength": 128,
+        "minLength": 8,
+        "pattern": "^[A-Za-z0-9_-]+$",
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Source Read Request Id"
+     },
+     "goal": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Goal",
+      "type": "string"
+     }
+    },
+    "required": [
+     "goal"
+    ],
+    "title": "DraftArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "keyboard.type_focused",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "text": {
+      "maxLength": 500,
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+     }
+    },
+    "required": [
+     "text"
+    ],
+    "title": "FocusedTextArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "grok.preview_reply",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "mode": {
+      "const": "preview",
+      "default": "preview",
+      "title": "Mode",
+      "type": "string"
+     },
+     "card_id": {
+      "pattern": "^\\d{8}-\\d{2}$",
+      "title": "Card Id",
+      "type": "string"
+     },
+     "target_handle": {
+      "pattern": "^@[A-Za-z0-9_]{1,15}$",
+      "title": "Target Handle",
+      "type": "string"
+     }
+    },
+    "required": [
+     "card_id",
+     "target_handle"
+    ],
+    "title": "ActionPreviewArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "grok.copy_reply",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "source_read_request_id": {
+      "maxLength": 128,
+      "minLength": 8,
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "title": "Source Read Request Id",
+      "type": "string"
+     }
+    },
+    "required": [
+     "source_read_request_id"
+    ],
+    "title": "ActionCopyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "x.verify_account",
+   "effect": "device_read",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "x.prepare_action_reply",
+   "effect": "local_action_review",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "source_read_request_id": {
+      "maxLength": 128,
+      "minLength": 8,
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "title": "Source Read Request Id",
+      "type": "string"
+     },
+     "account_read_request_id": {
+      "maxLength": 128,
+      "minLength": 8,
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "title": "Account Read Request Id",
+      "type": "string"
+     }
+    },
+    "required": [
+     "source_read_request_id",
+     "account_read_request_id"
+    ],
+    "title": "ActionReplyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "grok.read_action",
+   "effect": "device_read",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "include_visual_transcription": {
+      "default": false,
+      "title": "Include Visual Transcription",
+      "type": "boolean"
+     }
+    },
+    "title": "ActionReadArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "public.read_results",
+   "effect": "device_read",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "x.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "instagram.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "xiaohongshu.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "tiktok.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "douyin.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "bilibili.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "linkedin.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "reddit.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "youtube.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "google_maps.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "app_store.search",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {
+     "query": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "SearchArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "instagram.profile_status",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "discord.status",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "bilibili.notifications",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "youtube.notifications",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "tiktok.notifications",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "douyin.notifications",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  },
+  {
+   "name": "muse.threads_bot_read",
+   "effect": "device",
+   "parameters": {
+    "additionalProperties": false,
+    "properties": {},
+    "title": "EmptyArgs",
+    "type": "object"
+   }
+  }
+ ]
+}

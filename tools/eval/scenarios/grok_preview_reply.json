@@ -1,0 +1,37 @@
+{
+  "name": "grok_preview_reply",
+  "mode": "preview_only",
+  "manual": true,
+  "start_condition": {
+    "surface": "in-app",
+    "note": "Human must establish this start condition; the runner never resets Home. Fresh explicitly reviewed card and exact public target required. Verify preview and discard, with published=false and acknowledged=false."
+  },
+  "steps": [
+    {
+      "tool_name": "grok.preview_reply",
+      "args": {
+        "mode": "preview",
+        "card_id": "00000000-00",
+        "target_handle": "@ESP32QA"
+      }
+    }
+  ],
+  "success": {
+    "receipt_status": [
+      "completed"
+    ],
+    "visible_check_note": "Fresh explicitly reviewed card and exact public target required. Verify preview and discard, with published=false and acknowledged=false."
+  },
+  "max_seconds": 180,
+  "never": [
+    "send",
+    "post",
+    "like",
+    "follow",
+    "DM",
+    "account_switch",
+    "login_credentials",
+    "private_history"
+  ],
+  "manual_reason": "No fresh reviewed card/target is supplied. Placeholder identifiers must never dispatch. Preview and discard require human-visible checks."
+}

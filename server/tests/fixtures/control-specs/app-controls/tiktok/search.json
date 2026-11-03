@@ -1,0 +1,62 @@
+{
+  "app": "TikTok",
+  "control": "public_search_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.956338028169014,
+    0.04351851851851852
+  ],
+  "anchors": [
+    "live",
+    "create",
+    "home"
+  ],
+  "target": "public_search",
+  "patches": {
+    "live": {
+      "box": [
+        14,
+        28,
+        50,
+        66
+      ],
+      "file": "live.png"
+    },
+    "create": {
+      "box": [
+        332,
+        1024,
+        377,
+        1061
+      ],
+      "file": "create.png"
+    },
+    "home": {
+      "box": [
+        160,
+        1025,
+        190,
+        1060
+      ],
+      "file": "home.png"
+    },
+    "public_search": {
+      "box": [
+        661,
+        28,
+        697,
+        66
+      ],
+      "file": "public_search.png"
+    }
+  },
+  "pointer_region": [
+    0.91,
+    0.024,
+    1,
+    0.082
+  ]
+}

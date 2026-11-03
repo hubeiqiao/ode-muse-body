@@ -1,0 +1,617 @@
+{
+  "hidden": {
+    "position": [
+      0.5107961820509835,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 221,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "outside_roi": {
+    "position": [
+      0.39669421487603307,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 221,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "wrong_direction": {
+    "position": [
+      0.44741299033872656,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        55,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "wrong_magnitude": {
+    "position": [
+      0.5213595623326737,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        62,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "off_axis": {
+    "position": [
+      0.5002298917471772,
+      0.45
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        54,
+        29
+      ],
+      "outcome": "found"
+    }
+  },
+  "three_blobs": {
+    "position": [
+      0.5201829433903697,
+      0.45123456790123456
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 663,
+      "roi_pixels": 29583,
+      "change_span": [
+        78,
+        39
+      ],
+      "outcome": "found"
+    }
+  },
+  "unequal_blobs": {
+    "position": [
+      0.4854461538588545,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 282,
+      "roi_pixels": 29583,
+      "change_span": [
+        50,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_-20_False": {
+    "position": [
+      0.4997671982307066,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 422,
+      "roi_pixels": 29583,
+      "change_span": [
+        32,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_-20_True": {
+    "position": [
+      0.4997671982307066,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 422,
+      "roi_pixels": 29583,
+      "change_span": [
+        32,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_20_False": {
+    "position": [
+      0.5002328017692934,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 422,
+      "roi_pixels": 29583,
+      "change_span": [
+        32,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_20_True": {
+    "position": [
+      0.5002328017692934,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 422,
+      "roi_pixels": 29583,
+      "change_span": [
+        32,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_-50_False": {
+    "position": [
+      0.4997701082528227,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        54,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_-50_True": {
+    "position": [
+      0.4997701082528227,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        54,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_50_False": {
+    "position": [
+      0.5002298917471772,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        54,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_50_True": {
+    "position": [
+      0.5002298917471772,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        54,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_-100_False": {
+    "position": [
+      0.5002444418577582,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        90,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_-100_True": {
+    "position": [
+      0.5002444418577582,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        90,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_100_False": {
+    "position": [
+      0.49975555814224193,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        90,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "x_100_True": {
+    "position": [
+      0.49975555814224193,
+      0.4444444444444444
+    ],
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        90,
+        17
+      ],
+      "outcome": "found"
+    }
+  },
+  "y_-20_False": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 422,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        32
+      ],
+      "outcome": "non_pointer_shape"
+    }
+  },
+  "y_-20_True": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 422,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        32
+      ],
+      "outcome": "non_pointer_shape"
+    }
+  },
+  "y_20_False": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 422,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        32
+      ],
+      "outcome": "non_pointer_shape"
+    }
+  },
+  "y_20_True": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 422,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        32
+      ],
+      "outcome": "non_pointer_shape"
+    }
+  },
+  "y_-50_False": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        55
+      ],
+      "outcome": "non_pointer_shape"
+    }
+  },
+  "y_-50_True": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        55
+      ],
+      "outcome": "non_pointer_shape"
+    }
+  },
+  "y_50_False": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        55
+      ],
+      "outcome": "non_pointer_shape"
+    }
+  },
+  "y_50_True": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        55
+      ],
+      "outcome": "non_pointer_shape"
+    }
+  },
+  "y_-100_False": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        93
+      ],
+      "outcome": "change_too_spread"
+    }
+  },
+  "y_-100_True": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        93
+      ],
+      "outcome": "change_too_spread"
+    }
+  },
+  "y_100_False": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        93
+      ],
+      "outcome": "change_too_spread"
+    }
+  },
+  "y_100_True": {
+    "position": null,
+    "diag": {
+      "roi": [
+        269,
+        393,
+        440,
+        566
+      ],
+      "changed_pixels": 442,
+      "roi_pixels": 29583,
+      "change_span": [
+        17,
+        93
+      ],
+      "outcome": "change_too_spread"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "app": "X",
+  "control": "preview_filled_composer",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.933,
+    0.07
+  ],
+  "anchors": [
+    "cancel",
+    "media"
+  ],
+  "target": "enabled_post",
+  "patches": {
+    "cancel": {
+      "box": [
+        18,
+        63,
+        76,
+        91
+      ],
+      "file": "preview-filled-cancel.png"
+    },
+    "media": {
+      "box": [
+        9,
+        1020,
+        34,
+        1046
+      ],
+      "file": "preview-filled-media.png"
+    },
+    "enabled_post": {
+      "box": [
+        634,
+        60,
+        691,
+        92
+      ],
+      "file": "preview-filled-enabled_post.png"
+    }
+  }
+}

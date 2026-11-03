@@ -1,0 +1,56 @@
+{
+  "app": "X",
+  "control": "public_search_form_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.4647887323943662,
+    0.05
+  ],
+  "anchors": [
+    "explore",
+    "settings",
+    "home"
+  ],
+  "target": "query",
+  "patches": {
+    "explore": {
+      "box": [
+        31,
+        90,
+        106,
+        122
+      ],
+      "file": "focus-explore.png"
+    },
+    "settings": {
+      "box": [
+        665,
+        42,
+        693,
+        69
+      ],
+      "file": "focus-settings.png"
+    },
+    "home": {
+      "box": [
+        30,
+        1019,
+        58,
+        1046
+      ],
+      "file": "focus-home.png"
+    },
+    "query": {
+      "box": [
+        72,
+        43,
+        154,
+        66
+      ],
+      "file": "focus-query.png"
+    }
+  }
+}

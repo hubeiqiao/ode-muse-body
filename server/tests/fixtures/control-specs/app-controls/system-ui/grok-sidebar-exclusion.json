@@ -1,0 +1,56 @@
+{
+  "app": "System UI",
+  "control": "excluded_grok_sidebar",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.1,
+    0.1
+  ],
+  "anchors": [
+    "logo",
+    "plus",
+    "search"
+  ],
+  "target": "brand",
+  "patches": {
+    "brand": {
+      "box": [
+        130,
+        192,
+        208,
+        218
+      ],
+      "file": "grok-sidebar-brand.png"
+    },
+    "logo": {
+      "box": [
+        116,
+        115,
+        190,
+        190
+      ],
+      "file": "grok-sidebar-logo.png"
+    },
+    "plus": {
+      "box": [
+        262,
+        36,
+        290,
+        66
+      ],
+      "file": "grok-sidebar-plus.png"
+    },
+    "search": {
+      "box": [
+        208,
+        36,
+        235,
+        65
+      ],
+      "file": "grok-sidebar-search.png"
+    }
+  }
+}

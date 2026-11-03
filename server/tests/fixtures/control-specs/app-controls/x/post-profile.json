@@ -1,0 +1,56 @@
+{
+  "app": "X",
+  "control": "preview_post_profile_tab",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.688,
+    0.956
+  ],
+  "anchors": [
+    "post_title",
+    "back",
+    "search"
+  ],
+  "target": "profile",
+  "patches": {
+    "post_title": {
+      "box": [
+        333,
+        36,
+        378,
+        58
+      ],
+      "file": "post-profile-post_title.png"
+    },
+    "back": {
+      "box": [
+        13,
+        36,
+        34,
+        58
+      ],
+      "file": "post-profile-back.png"
+    },
+    "search": {
+      "box": [
+        120,
+        1020,
+        146,
+        1047
+      ],
+      "file": "post-profile-search.png"
+    },
+    "profile": {
+      "box": [
+        474,
+        1019,
+        504,
+        1049
+      ],
+      "file": "post-profile-profile.png"
+    }
+  }
+}

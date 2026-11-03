@@ -1,0 +1,32 @@
+{
+  "name": "douyin_notifications",
+  "mode": "read_only",
+  "manual": false,
+  "start_condition": {
+    "surface": "Home",
+    "note": "Human must establish this start condition; the runner never resets Home. Open the notifications/activity tab and inspect its header/status only. Do not open private messages or engage."
+  },
+  "steps": [
+    {
+      "tool_name": "douyin.notifications",
+      "args": {}
+    }
+  ],
+  "success": {
+    "receipt_status": [
+      "completed"
+    ],
+    "visible_check_note": "Open the notifications/activity tab and inspect its header/status only. Do not open private messages or engage."
+  },
+  "max_seconds": 120,
+  "never": [
+    "send",
+    "post",
+    "like",
+    "follow",
+    "DM",
+    "account_switch",
+    "login_credentials",
+    "private_history"
+  ]
+}

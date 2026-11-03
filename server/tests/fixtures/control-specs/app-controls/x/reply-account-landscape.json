@@ -1,0 +1,46 @@
+{
+  "app": "X",
+  "control": "example_creator_reply_composer",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "center": [
+    0.2485,
+    0.7111
+  ],
+  "anchors": [
+    "name",
+    "handle"
+  ],
+  "target": "avatar",
+  "patches": {
+    "name": {
+      "box": [
+        446,
+        736,
+        604,
+        770
+      ],
+      "file": "reply-account-landscape-name.png"
+    },
+    "handle": {
+      "box": [
+        446,
+        768,
+        600,
+        798
+      ],
+      "file": "reply-account-landscape-handle.png"
+    },
+    "avatar": {
+      "box": [
+        380,
+        740,
+        438,
+        796
+      ],
+      "file": "reply-account-landscape-avatar.png"
+    }
+  }
+}

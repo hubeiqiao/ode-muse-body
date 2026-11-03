@@ -1,0 +1,53 @@
+{
+  "app": "Bilibili",
+  "control": "public_search_entry",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "orientation": "landscape",
+  "center": [
+    0.15,
+    0.06
+  ],
+  "anchors": [
+    "home",
+    "history"
+  ],
+  "target": "search",
+  "patches": {
+    "home": {
+      "box": [
+        543,
+        993,
+        585,
+        1051
+      ],
+      "file": "landscape-entry-home.png"
+    },
+    "history": {
+      "box": [
+        1496,
+        47,
+        1543,
+        88
+      ],
+      "file": "landscape-entry-history.png"
+    },
+    "search": {
+      "box": [
+        124,
+        50,
+        157,
+        81
+      ],
+      "file": "landscape-entry-search.png"
+    }
+  },
+  "pointer_region": [
+    0.066,
+    0.035,
+    0.232,
+    0.085
+  ]
+}

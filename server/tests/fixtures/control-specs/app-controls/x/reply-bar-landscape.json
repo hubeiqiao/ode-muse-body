@@ -1,0 +1,62 @@
+{
+  "app": "X",
+  "control": "preview_reply_bar",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "center": [
+    0.3335,
+    0.8657
+  ],
+  "anchors": [
+    "back",
+    "title",
+    "bar_avatar"
+  ],
+  "target": "bar_text",
+  "patches": {
+    "back": {
+      "box": [
+        16,
+        52,
+        56,
+        90
+      ],
+      "file": "reply-bar-landscape-back.png"
+    },
+    "title": {
+      "box": [
+        790,
+        54,
+        856,
+        90
+      ],
+      "file": "reply-bar-landscape-title.png"
+    },
+    "bar_avatar": {
+      "box": [
+        380,
+        906,
+        438,
+        964
+      ],
+      "file": "reply-bar-landscape-bar_avatar.png"
+    },
+    "bar_text": {
+      "box": [
+        464,
+        914,
+        634,
+        956
+      ],
+      "file": "reply-bar-landscape-bar_text.png"
+    }
+  },
+  "pointer_region": [
+    0.27,
+    0.82,
+    0.45,
+    0.91
+  ]
+}

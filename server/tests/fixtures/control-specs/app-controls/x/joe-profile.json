@@ -1,0 +1,56 @@
+{
+  "app": "X",
+  "control": "example_creator_self_profile",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.5,
+    0.37
+  ],
+  "anchors": [
+    "name",
+    "handle",
+    "edit_profile"
+  ],
+  "target": "share_profile",
+  "patches": {
+    "name": {
+      "box": [
+        64,
+        362,
+        253,
+        391
+      ],
+      "file": "joe-profile-name.png"
+    },
+    "handle": {
+      "box": [
+        64,
+        389,
+        186,
+        414
+      ],
+      "file": "joe-profile-handle.png"
+    },
+    "edit_profile": {
+      "box": [
+        468,
+        560,
+        582,
+        590
+      ],
+      "file": "joe-profile-edit_profile.png"
+    },
+    "share_profile": {
+      "box": [
+        157,
+        560,
+        268,
+        590
+      ],
+      "file": "joe-profile-share_profile.png"
+    }
+  }
+}

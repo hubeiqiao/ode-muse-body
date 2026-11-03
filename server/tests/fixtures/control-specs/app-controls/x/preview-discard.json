@@ -1,0 +1,46 @@
+{
+  "app": "X",
+  "control": "preview_discard_prompt",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.5,
+    0.501
+  ],
+  "anchors": [
+    "save",
+    "keep"
+  ],
+  "target": "discard",
+  "patches": {
+    "save": {
+      "box": [
+        287,
+        473,
+        423,
+        500
+      ],
+      "file": "preview-discard-save.png"
+    },
+    "keep": {
+      "box": [
+        286,
+        580,
+        425,
+        607
+      ],
+      "file": "preview-discard-keep.png"
+    },
+    "discard": {
+      "box": [
+        317,
+        529,
+        394,
+        554
+      ],
+      "file": "preview-discard-discard.png"
+    }
+  }
+}

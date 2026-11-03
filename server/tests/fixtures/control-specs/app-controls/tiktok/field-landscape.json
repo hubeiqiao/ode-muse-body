@@ -1,0 +1,53 @@
+{
+  "app": "TikTok",
+  "control": "public_search_field",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "orientation": "landscape",
+  "center": [
+    0.3,
+    0.062
+  ],
+  "anchors": [
+    "back",
+    "submit"
+  ],
+  "target": "magnifier",
+  "patches": {
+    "back": {
+      "box": [
+        12,
+        48,
+        36,
+        83
+      ],
+      "file": "landscape-field-back.png"
+    },
+    "submit": {
+      "box": [
+        1549,
+        53,
+        1587,
+        81
+      ],
+      "file": "landscape-field-submit.png"
+    },
+    "magnifier": {
+      "box": [
+        78,
+        48,
+        110,
+        82
+      ],
+      "file": "landscape-field-magnifier.png"
+    }
+  },
+  "pointer_region": [
+    0.04,
+    0.035,
+    0.93,
+    0.088
+  ]
+}

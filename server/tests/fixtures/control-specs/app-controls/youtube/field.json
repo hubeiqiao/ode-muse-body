@@ -1,0 +1,62 @@
+{
+  "app": "YouTube",
+  "control": "public_search_field",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.5,
+    0.048
+  ],
+  "anchors": [
+    "back",
+    "history_search_one",
+    "history_search_two"
+  ],
+  "target": "query_end",
+  "patches": {
+    "back": {
+      "box": [
+        10,
+        38,
+        35,
+        65
+      ],
+      "file": "back.png"
+    },
+    "history_search_one": {
+      "box": [
+        12,
+        87,
+        43,
+        114
+      ],
+      "file": "history_search_one.png"
+    },
+    "history_search_two": {
+      "box": [
+        12,
+        139,
+        43,
+        167
+      ],
+      "file": "history_search_two.png"
+    },
+    "query_end": {
+      "box": [
+        663,
+        38,
+        690,
+        65
+      ],
+      "file": "query_end.png"
+    }
+  },
+  "pointer_region": [
+    0.04,
+    0.02,
+    0.98,
+    0.1
+  ]
+}

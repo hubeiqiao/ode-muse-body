@@ -1,0 +1,7 @@
+# Fill locally; never commit tunnel credentials or the filled configuration.
+tunnel: REPLACE_WITH_TUNNEL_UUID
+credentials-file: /absolute/path/to/local/tunnel-credentials.json
+ingress:
+  - hostname: ode.example.com
+    service: http://127.0.0.1:8890
+  - service: http_status:404

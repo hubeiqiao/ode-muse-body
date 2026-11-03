@@ -1,0 +1,46 @@
+{
+  "app": "X",
+  "control": "preview_account_menu_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.049,
+    0.043
+  ],
+  "anchors": [
+    "brand",
+    "search_tab"
+  ],
+  "target": "avatar",
+  "patches": {
+    "brand": {
+      "box": [
+        341,
+        31,
+        369,
+        61
+      ],
+      "file": "account-menu-entry-brand.png"
+    },
+    "search_tab": {
+      "box": [
+        120,
+        1020,
+        146,
+        1047
+      ],
+      "file": "account-menu-entry-search_tab.png"
+    },
+    "avatar": {
+      "box": [
+        19,
+        31,
+        51,
+        63
+      ],
+      "file": "account-menu-entry-avatar.png"
+    }
+  }
+}

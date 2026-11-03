@@ -1,0 +1,32 @@
+{
+  "name": "discord_status",
+  "mode": "read_only",
+  "manual": false,
+  "start_condition": {
+    "surface": "Home",
+    "note": "Human must establish this start condition; the runner never resets Home. Server/channel list header only. Never inspect DM content."
+  },
+  "steps": [
+    {
+      "tool_name": "discord.status",
+      "args": {}
+    }
+  ],
+  "success": {
+    "receipt_status": [
+      "completed"
+    ],
+    "visible_check_note": "Server/channel list header only. Never inspect DM content."
+  },
+  "max_seconds": 120,
+  "never": [
+    "send",
+    "post",
+    "like",
+    "follow",
+    "DM",
+    "account_switch",
+    "login_credentials",
+    "private_history"
+  ]
+}

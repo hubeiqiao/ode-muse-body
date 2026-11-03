@@ -1,0 +1,46 @@
+{
+  "app": "Grok Bot",
+  "control": "prepared_reply_copy",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.838,
+    0.427
+  ],
+  "anchors": [
+    "workspace",
+    "target_link"
+  ],
+  "target": "copy",
+  "patches": {
+    "workspace": {
+      "box": [
+        293,
+        38,
+        421,
+        67
+      ],
+      "file": "copy-compact-workspace.png"
+    },
+    "target_link": {
+      "box": [
+        419,
+        413,
+        582,
+        439
+      ],
+      "file": "copy-compact-target_link.png"
+    },
+    "copy": {
+      "box": [
+        585,
+        451,
+        605,
+        474
+      ],
+      "file": "copy-compact-copy.png"
+    }
+  }
+}

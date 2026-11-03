@@ -1,0 +1,9 @@
+{
+  "name": "esp32-twitter-text-validator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline canonical weighted X text validation; no API or publishing",
+  "dependencies": {
+    "twitter-text": "3.1.0"
+  }
+}

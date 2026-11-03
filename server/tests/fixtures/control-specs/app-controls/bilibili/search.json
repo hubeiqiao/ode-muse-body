@@ -1,0 +1,56 @@
+{
+  "app": "Bilibili",
+  "control": "public_search_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.176056338028169,
+    0.03981481481481482
+  ],
+  "anchors": [
+    "nav",
+    "home",
+    "categories"
+  ],
+  "target": "search",
+  "patches": {
+    "nav": {
+      "box": [
+        225,
+        28,
+        477,
+        57
+      ],
+      "file": "nav.png"
+    },
+    "home": {
+      "box": [
+        177,
+        982,
+        197,
+        1009
+      ],
+      "file": "home.png"
+    },
+    "categories": {
+      "box": [
+        283,
+        982,
+        311,
+        1009
+      ],
+      "file": "categories.png"
+    },
+    "search": {
+      "box": [
+        85,
+        35,
+        102,
+        52
+      ],
+      "file": "search.png"
+    }
+  }
+}

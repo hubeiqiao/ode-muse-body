@@ -1,0 +1,36 @@
+{
+  "name": "yolo_goal",
+  "mode": "read_only",
+  "manual": false,
+  "start_condition": {
+    "surface": "Home",
+    "note": "Human must establish this start condition; the runner never resets Home. Goal may search public content and read checked public-result quotes only. Review findings manually; planner completion is not proof of a useful finding."
+  },
+  "steps": [
+    {
+      "tool_name": "mission.run",
+      "args": {
+        "goal": "Search public YouTube for English speaking practice and read checked public search results. Read-only public research; return checked quotes without creating content or engaging with accounts.",
+        "seconds": 180,
+        "max_steps": 3
+      }
+    }
+  ],
+  "success": {
+    "receipt_status": [
+      "awaiting_feedback"
+    ],
+    "visible_check_note": "Goal may search public content and read checked public-result quotes only. Review findings manually; planner completion is not proof of a useful finding."
+  },
+  "max_seconds": 190,
+  "never": [
+    "send",
+    "post",
+    "like",
+    "follow",
+    "DM",
+    "account_switch",
+    "login_credentials",
+    "private_history"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "app": "Bilibili",
+  "control": "public_query_text",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.5,
+    0.04
+  ],
+  "anchors": [
+    "cancel",
+    "form_glass"
+  ],
+  "target": "form_clear",
+  "patches": {
+    "cancel": {
+      "box": [
+        650,
+        33,
+        693,
+        59
+      ],
+      "file": "cancel.png"
+    },
+    "form_glass": {
+      "box": [
+        124,
+        34,
+        145,
+        53
+      ],
+      "file": "form_glass.png"
+    },
+    "form_clear": {
+      "box": [
+        565,
+        31,
+        591,
+        56
+      ],
+      "file": "form_clear.png"
+    }
+  }
+}

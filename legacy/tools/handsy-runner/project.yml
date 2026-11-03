@@ -1,0 +1,47 @@
+name: HandsyRunner
+options:
+  deploymentTarget:
+    iOS: "16.4"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: $(APPLE_DEVELOPMENT_TEAM)
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: "2"
+    GENERATE_INFOPLIST_FILE: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SWIFT_OBJC_BRIDGING_HEADER: ""
+targets:
+  HandsyHost:
+    type: application
+    platform: iOS
+    sources: [HandsyHost]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.handsy.host
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: Local HandsyRunner automation on the trusted LAN.
+  HandsyRunnerUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [HandsyRunnerUITests]
+    dependencies:
+      - target: HandsyHost
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.handsy.runner
+        SWIFT_OBJC_BRIDGING_HEADER: HandsyRunnerUITests/ExceptionBridge.h
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: Local HandsyRunner automation on the trusted LAN.
+schemes:
+  HandsyRunner:
+    build:
+      targets:
+        HandsyHost: all
+        HandsyRunnerUITests: [test]
+    test:
+      gatherCoverageData: false
+      targets:
+        - name: HandsyRunnerUITests
+          parallelizable: false

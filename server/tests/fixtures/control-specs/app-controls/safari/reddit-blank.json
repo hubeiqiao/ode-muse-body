@@ -1,0 +1,52 @@
+{
+  "app": "Safari",
+  "control": "public_browser_blank_address",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.25,
+    0.05
+  ],
+  "anchors": [
+    "blank_window_menu",
+    "blank_close"
+  ],
+  "target": "blank_prompt",
+  "patches": {
+    "blank_window_menu": {
+      "box": [
+        16,
+        39,
+        60,
+        66
+      ],
+      "file": "blank_window_menu.png"
+    },
+    "blank_prompt": {
+      "box": [
+        70,
+        41,
+        242,
+        67
+      ],
+      "file": "blank_prompt.png"
+    },
+    "blank_close": {
+      "box": [
+        260,
+        42,
+        283,
+        65
+      ],
+      "file": "blank_close.png"
+    }
+  },
+  "pointer_region": [
+    0.08,
+    0.027,
+    0.43,
+    0.075
+  ]
+}

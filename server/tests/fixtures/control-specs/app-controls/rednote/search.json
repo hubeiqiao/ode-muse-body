@@ -1,0 +1,66 @@
+{
+  "app": "rednote",
+  "control": "public_search_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.8450704225352113,
+    0.037037037037037035
+  ],
+  "anchors": [
+    "explore",
+    "video",
+    "home",
+    "market"
+  ],
+  "target": "public_query_entry",
+  "patches": {
+    "explore": {
+      "box": [
+        326,
+        30,
+        387,
+        58
+      ],
+      "file": "explore.png"
+    },
+    "video": {
+      "box": [
+        400,
+        30,
+        447,
+        53
+      ],
+      "file": "video.png"
+    },
+    "home": {
+      "box": [
+        55,
+        1022,
+        86,
+        1061
+      ],
+      "file": "home.png"
+    },
+    "market": {
+      "box": [
+        197,
+        1022,
+        230,
+        1061
+      ],
+      "file": "market.png"
+    },
+    "public_query_entry": {
+      "box": [
+        512,
+        30,
+        595,
+        52
+      ],
+      "file": "public_query_entry.png"
+    }
+  }
+}

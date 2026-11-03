@@ -1,0 +1,86 @@
+{
+  "app": "Douyin",
+  "control": "public_search_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.87,
+    0.049074074074074076
+  ],
+  "anchors": [
+    "recommended",
+    "home",
+    "create"
+  ],
+  "target": "search",
+  "patches": {
+    "recommended": {
+      "box": [
+        470,
+        39,
+        505,
+        74
+      ],
+      "file": "recommended.png"
+    },
+    "home": {
+      "box": [
+        168,
+        1024,
+        205,
+        1057
+      ],
+      "file": "home.png"
+    },
+    "create": {
+      "box": [
+        333,
+        1023,
+        377,
+        1057
+      ],
+      "file": "create.png"
+    },
+    "search": {
+      "box": [
+        548,
+        42,
+        569,
+        64
+      ],
+      "file": "search.png"
+    },
+    "intro_title": {
+      "box": [
+        299,
+        446,
+        412,
+        474
+      ],
+      "file": "intro_title.png"
+    },
+    "intro_close": {
+      "box": [
+        517,
+        428,
+        544,
+        451
+      ],
+      "file": "intro_close.png"
+    }
+  },
+  "blockers": [
+    [
+      "intro_title",
+      "intro_close"
+    ]
+  ],
+  "pointer_region": [
+    0.76,
+    0.028,
+    0.99,
+    0.08
+  ]
+}

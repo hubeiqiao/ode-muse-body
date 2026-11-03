@@ -1,0 +1,56 @@
+{
+  "app": "X",
+  "control": "preview_profile_navigation",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.688,
+    0.956
+  ],
+  "anchors": [
+    "home",
+    "search",
+    "bookmark"
+  ],
+  "target": "profile",
+  "patches": {
+    "home": {
+      "box": [
+        31,
+        1020,
+        59,
+        1047
+      ],
+      "file": "profile-navigation-home.png"
+    },
+    "search": {
+      "box": [
+        120,
+        1020,
+        146,
+        1047
+      ],
+      "file": "profile-navigation-search.png"
+    },
+    "bookmark": {
+      "box": [
+        652,
+        1020,
+        680,
+        1048
+      ],
+      "file": "profile-navigation-bookmark.png"
+    },
+    "profile": {
+      "box": [
+        474,
+        1019,
+        503,
+        1048
+      ],
+      "file": "profile-navigation-profile.png"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "app": "App Store",
+  "control": "public_search_field",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.5,
+    0.052
+  ],
+  "anchors": [
+    "filters",
+    "clear"
+  ],
+  "target": "magnifier",
+  "patches": {
+    "filters": {
+      "box": [
+        20,
+        40,
+        108,
+        77
+      ],
+      "file": "filters-field.png"
+    },
+    "magnifier": {
+      "box": [
+        134,
+        47,
+        153,
+        67
+      ],
+      "file": "magnifier-field.png"
+    },
+    "clear": {
+      "box": [
+        652,
+        47,
+        674,
+        68
+      ],
+      "file": "clear-field.png"
+    }
+  },
+  "pointer_region": [
+    0.16,
+    0.027,
+    0.96,
+    0.082
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "app": "System UI",
+  "control": "excluded_chatgpt_sidebar",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.1,
+    0.1
+  ],
+  "anchors": [
+    "pinned",
+    "recents"
+  ],
+  "target": "brand",
+  "patches": {
+    "brand": {
+      "box": [
+        38,
+        46,
+        139,
+        82
+      ],
+      "file": "chatgpt-sidebar-brand.png"
+    },
+    "pinned": {
+      "box": [
+        37,
+        387,
+        108,
+        414
+      ],
+      "file": "chatgpt-sidebar-pinned.png"
+    },
+    "recents": {
+      "box": [
+        38,
+        581,
+        116,
+        613
+      ],
+      "file": "chatgpt-sidebar-recents.png"
+    }
+  }
+}

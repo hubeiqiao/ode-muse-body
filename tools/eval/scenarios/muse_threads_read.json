@@ -1,0 +1,32 @@
+{
+  "name": "muse_threads_read",
+  "mode": "read_only",
+  "manual": false,
+  "start_condition": {
+    "surface": "Home",
+    "note": "Human must establish Home; the runner never resets Home. Read latest visible prepared target/comment cards in the locally identified Threads bot only. No Main chat, new bot prompt or private history."
+  },
+  "steps": [
+    {
+      "tool_name": "muse.threads_bot_read",
+      "args": {}
+    }
+  ],
+  "success": {
+    "receipt_status": [
+      "completed"
+    ],
+    "visible_check_note": "Read latest visible prepared target/comment cards in the locally identified Threads bot only. No Main chat, new bot prompt or private history."
+  },
+  "max_seconds": 120,
+  "never": [
+    "send",
+    "post",
+    "like",
+    "follow",
+    "DM",
+    "account_switch",
+    "login_credentials",
+    "private_history"
+  ]
+}

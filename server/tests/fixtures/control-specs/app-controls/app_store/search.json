@@ -1,0 +1,62 @@
+{
+  "app": "App Store",
+  "control": "public_search_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.6591549295774648,
+    0.04814814814814815
+  ],
+  "anchors": [
+    "today",
+    "games",
+    "apps"
+  ],
+  "target": "search",
+  "patches": {
+    "today": {
+      "box": [
+        232,
+        39,
+        284,
+        65
+      ],
+      "file": "today.png"
+    },
+    "games": {
+      "box": [
+        307,
+        39,
+        363,
+        65
+      ],
+      "file": "games.png"
+    },
+    "apps": {
+      "box": [
+        392,
+        39,
+        431,
+        65
+      ],
+      "file": "apps.png"
+    },
+    "search": {
+      "box": [
+        455,
+        39,
+        482,
+        66
+      ],
+      "file": "search.png"
+    }
+  },
+  "pointer_region": [
+    0.6,
+    0.027,
+    0.7,
+    0.08
+  ]
+}

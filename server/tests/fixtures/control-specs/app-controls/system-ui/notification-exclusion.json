@@ -1,0 +1,37 @@
+{
+  "app": "System UI",
+  "control": "excluded_notification_overlay",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.5,
+    0.63
+  ],
+  "anchors": [
+    "notification_heading",
+    "notification_clear"
+  ],
+  "target": "notification_heading",
+  "patches": {
+    "notification_heading": {
+      "box": [
+        236,
+        665,
+        480,
+        700
+      ],
+      "file": "notification_heading.png"
+    },
+    "notification_clear": {
+      "box": [
+        521,
+        659,
+        558,
+        699
+      ],
+      "file": "notification_clear.png"
+    }
+  }
+}

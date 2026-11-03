@@ -1,0 +1,46 @@
+{
+  "app": "rednote",
+  "control": "native_paste_denial_notice",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.5,
+    0.506
+  ],
+  "anchors": [
+    "paste_question",
+    "paste_allow_label"
+  ],
+  "target": "paste_decline",
+  "patches": {
+    "paste_question": {
+      "box": [
+        229,
+        484,
+        476,
+        511
+      ],
+      "file": "paste_question.png"
+    },
+    "paste_decline": {
+      "box": [
+        270,
+        533,
+        445,
+        563
+      ],
+      "file": "paste_decline.png"
+    },
+    "paste_allow_label": {
+      "box": [
+        310,
+        586,
+        403,
+        615
+      ],
+      "file": "paste_allow_label.png"
+    }
+  }
+}

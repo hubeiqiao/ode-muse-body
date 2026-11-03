@@ -1,0 +1,46 @@
+{
+  "app": "X",
+  "control": "preview_post_detail",
+  "reference_size": [
+    1646,
+    1080
+  ],
+  "center": [
+    0.9721,
+    0.0657
+  ],
+  "anchors": [
+    "back",
+    "title"
+  ],
+  "target": "more",
+  "patches": {
+    "back": {
+      "box": [
+        16,
+        52,
+        56,
+        90
+      ],
+      "file": "post-detail-landscape-back.png"
+    },
+    "title": {
+      "box": [
+        790,
+        54,
+        856,
+        90
+      ],
+      "file": "post-detail-landscape-title.png"
+    },
+    "more": {
+      "box": [
+        1580,
+        58,
+        1620,
+        84
+      ],
+      "file": "post-detail-landscape-more.png"
+    }
+  }
+}

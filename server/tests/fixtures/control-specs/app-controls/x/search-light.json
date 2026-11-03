@@ -1,0 +1,56 @@
+{
+  "app": "X",
+  "control": "public_search_entry",
+  "reference_size": [
+    710,
+    1080
+  ],
+  "center": [
+    0.18732394366197183,
+    0.9564814814814815
+  ],
+  "anchors": [
+    "brand",
+    "for_you",
+    "home"
+  ],
+  "target": "search",
+  "patches": {
+    "brand": {
+      "box": [
+        340,
+        32,
+        370,
+        65
+      ],
+      "file": "search-light-brand.png"
+    },
+    "for_you": {
+      "box": [
+        80,
+        81,
+        171,
+        113
+      ],
+      "file": "search-light-for_you.png"
+    },
+    "home": {
+      "box": [
+        30,
+        1019,
+        58,
+        1046
+      ],
+      "file": "search-light-home.png"
+    },
+    "search": {
+      "box": [
+        120,
+        1019,
+        146,
+        1047
+      ],
+      "file": "search-light-search.png"
+    }
+  }
+}
