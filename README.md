@@ -4,8 +4,8 @@
 
 **[Watch the 2:58 demo]([YOUTUBE_URL])** · [Two-minute judge guide](docs/JUDGES.md) · [Existing X result](https://x.com/hubeiqiao/status/2117654510482960846)
 
-[![Ode: I gave Muse my spare iPad](docs/assets/cover-v6-readme-2x1.png)]([YOUTUBE_URL])
-<sub>Muse character: Meta · not affiliated with or endorsed by Meta. The leap is a composite over a real desk shot.</sub>
+[![Ode: My iPad is alive?](docs/assets/ode-cover-readme-2x1.png)]([YOUTUBE_URL])
+<sub>Muse character: Meta · not affiliated with or endorsed by Meta. Thumbnail artwork: generated background, official Muse cutout, Joe's real face from the demo footage.</sub>
 
 Ode lets an assistant **see, talk, tap and type** in real iPad apps without a per-app API integration. **Muse Spark makes screen-based app decisions; an ESP32 supplies Bluetooth keyboard and mouse input; a Mac coordinates the loop.** Gemini Live handles voice and camera conversation. Muse runs in the cloud. **No Xcode IDE required. No jailbreak.** About $5 covers the board only.
 
