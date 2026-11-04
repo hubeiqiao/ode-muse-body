@@ -11,7 +11,7 @@ The previous export's 544-file manifest was checked byte-for-byte against the ba
 - iPad ESP32-C3 firmware source and an empty local-secrets template.
 - 24 registered app skill cards, with private operation/evidence records excluded.
 - Setup, hardware, safety, architecture, demo, judge and remote-access documentation.
-- Explicitly selected cover and four public-safe companion captures; a short sanitized model/HID documentation excerpt.
+- Explicitly selected cover, avatar, four public-safe companion captures and five short edited-film animated WebP excerpts; a short sanitized model/HID documentation excerpt.
 - Required third-party licenses/provenance and isolated legacy compatibility source outside the iPad BLE submission path.
 
 ## Excluded
@@ -22,17 +22,17 @@ Third-party legal contact addresses, loopback/bind/documentation IPs, and explic
 
 ## Reproduce verification
 
-Follow [TESTING.md](TESTING.md) for the full offline suites and build. The Markdown relative paths are checked, all six README image references survive GitHub's GFM renderer, and no tracked file exceeds 10 MB. The selected cover is the largest file (1,005,101 bytes); no videos are bundled.
+Follow [TESTING.md](TESTING.md) for the full offline suites and build. The presentation refresh is described in [PRESENTATION.md](PRESENTATION.md); [media recipes and upload instructions](assets/media/README.md) record the selected excerpts. Full-resolution videos and the separately exported attachment MP4 are not bundled. Relative references and asset sizes are checked as part of the documentation release.
 
 Before pushing, run Gitleaks on the final file tree and the new normal commits, and review regex/metadata checks on every manifest file and each new commit snapshot/diff:
 
 ```sh
 gitleaks dir . --redact --no-banner
-gitleaks git . --log-opts='9eed068..HEAD' --redact --no-banner
+gitleaks git . --log-opts='7ff96d7..HEAD' --redact --no-banner
 ```
 
 The separate privacy checks cover credential formats, owner/device identifiers, addresses, account syntax, forbidden runtime paths, dotenv values, file size and image metadata. Both automated scans and the reviewed exception inventory must be clear before push. Clean scans establish the defined checks, not every possible encoded disclosure.
 
-## Before changing visibility
+## Public release checklist
 
-The demo video is linked in README, DEMO and JUDGES: https://youtu.be/0wcoqi5CVuQ. Review the rendered GitHub page, safe captures, character rights/credits and final demo description. Preserve Henry Yuan and Hermes attribution, including in demo/video/post descriptions. The owner changes visibility and submits the hackathon entry separately; pushing this snapshot performs neither action.
+The demo video is linked in README, DEMO and JUDGES: https://youtu.be/0wcoqi5CVuQ. Review the rendered GitHub page, safe captures, character rights/credits and final demo description. Preserve Henry Yuan and Hermes attribution, including in demo/video/post descriptions. The repository was verified public on November 4, 2026. This presentation update leaves visibility unchanged; hackathon submission remains a separate owner action.

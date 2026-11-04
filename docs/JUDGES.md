@@ -6,7 +6,7 @@
 
 - **First 50 seconds of your review:** watch film **00:29–01:17**. Follow room description → Psyduck → photo → draft → fresh confirmation → one physical send and result. [Existing X result](https://x.com/hubeiqiao/status/2117654510482960846).
 - **Next 20 seconds:** watch **01:30–01:46** and compare the [sanitized model/HID excerpt](DEMO.md#sanitized-real-run-excerpt). Muse Spark locates a search target; board input changes the screen. This is one selected real step, not proof of model planning at every tap.
-- **Next 20 seconds:** watch **02:07–02:24** and inspect the [phone UI captures](../README.md#companion-on-your-phone). Goals return local review drafts; Feed retains a checked quote/source; Library is owner-controlled. These captures include saved state.
+- **Next 20 seconds:** watch **02:07–02:24** and inspect the [phone UI captures](DEMO.md#companion-and-capability-boundaries). Goals return local review drafts; Feed retains a checked quote/source; Library is owner-controlled. These captures include saved state.
 - **Final 30 seconds:** inspect the rubric/source map below. [Testing](TESTING.md) separates static definitions, current execution and excluded private-frame cases. Optional: **02:24 onward**, live Ottawa demonstration; Amazon at **02:33.47**.
 
 The opening is Muse's composite leap → “Muse had no body” → Meet Ode's redrawn session chat → ESP32 explanation timed to real HID logs. The [complete chapter list](DEMO.md#chapters-for-the-final-v6-cut) includes the 01:50 architecture beat.

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/hubeiqiao/ode-muse-body/blob/main/SECURITY.md
+    about: Report privately; do not disclose sensitive details in public issues.
+  - name: Setup and documentation
+    url: https://github.com/hubeiqiao/ode-muse-body/blob/main/docs/README.md
+    about: Start with setup, hardware and offline verification guides.

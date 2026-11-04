@@ -1,4 +1,7 @@
-# Ode — Give Muse a body: protected remote access
+# Protected remote access
+
+[Documentation](README.md) · [Project](../README.md)
+
 
 The Mac remains Ode's host. Cloudflare Tunnel gives its local web server a custom HTTPS hostname; Cloudflare Access identifies the owner. Long-lived model keys, ESP32 connections and the AirPlay receiver stay on the Mac/LAN. This guide prepares an optional deployment; no tunnel is provisioned by the repository.
 

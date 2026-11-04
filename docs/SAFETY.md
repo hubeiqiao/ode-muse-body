@@ -1,4 +1,7 @@
-# Ode — Give Muse a body: safety and privacy
+# Safety and privacy
+
+[Documentation](README.md) · [Project](../README.md)
+
 
 Muse operates a real device. Use a dedicated, owner-controlled iPad and stay present. Start with read-only tasks and verify actual screen changes.
 

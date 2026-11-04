@@ -1,4 +1,7 @@
-# Ode — Give Muse a body: local setup
+# Local setup
+
+[Documentation](README.md) · [Project](../README.md)
+
 
 Start with the root README and [hardware guide](HARDWARE.md). This guide covers the pieces that depend on the operator's Mac, iPad and installed app layouts.
 

@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a reproducible problem with sanitized evidence.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Use synthetic data. Keep credentials, private frames, device identities and runtime receipts out of public issues. Report vulnerabilities through SECURITY.md."
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: What were you trying to do, and what happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Prefer an offline or synthetic reproducer. State uncertain delivery without retrying device input.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Commit SHA, macOS/iPadOS, Python/Node versions and board model. Omit serial numbers, addresses and calibration.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence and scope
+      description: Include relevant error text, offline results and skip reasons. Distinguish offline checks from attended physical observations.

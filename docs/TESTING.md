@@ -1,4 +1,7 @@
-# Ode — Give Muse a body: verification
+# Offline verification
+
+[Documentation](README.md) · [Project](../README.md)
+
 
 Run from the repository root with Python 3.12 and Node 22+:
 

@@ -1,4 +1,7 @@
-# Ode — Give Muse a body: architecture
+# Architecture
+
+[Documentation](README.md) · [Project](../README.md)
+
 
 Muse lives on an idle iPad, talks to its owner, and operates the device through physical Bluetooth input. The Mac hosts the model clients, screen receiver, orchestration and local state. The iPad needs no agent app or jailbreak.
 

@@ -1,4 +1,7 @@
-# Ode — Give Muse a body: hardware
+# Hardware
+
+[Documentation](README.md) · [Project](../README.md)
+
 
 Muse's hands are an ESP32-C3 Bluetooth keyboard and mouse. Its eyes come from AirPlay. The board connects outward over Wi-Fi/TCP to the Mac server; USB is for board power, backup and flashing only.
 

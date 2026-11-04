@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use Ode in your work, please cite this repository and retain its upstream credits."
+title: "Ode — Give Muse a Body"
+abstract: "A Muse Spark-powered iPad companion with Mac coordination, ESP32 Bluetooth input, bounded research, source checks and owner-controlled memory."
+type: software
+authors:
+  - family-names: Hu
+    given-names: Joe
+repository-code: "https://github.com/hubeiqiao/ode-muse-body"
+url: "https://github.com/hubeiqiao/ode-muse-body"
+license: MIT
+keywords:
+  - Muse Spark
+  - embodied agents
+  - iPad
+  - ESP32
+  - Bluetooth HID
+references:
+  - type: software
+    title: "ESP32 iPhone Agent"
+    authors:
+      - family-names: Yuan
+        given-names: Henry
+    repository-code: "https://github.com/onehumanbeing/esp32-iphone-agent"
+    license: MIT
+  - type: software
+    title: "Hermes Agent"
+    authors:
+      - name: "Nous Research"
+    repository-code: "https://github.com/NousResearch/hermes-agent"
+    license: MIT

@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a focused improvement to Ode.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and intended user
+      description: Describe a concrete recurring task or limitation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: What should change? Include alternatives and relevant action/privacy boundaries.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: How would we verify it?
+      description: Suggest a synthetic/offline check and, if relevant, a bounded attended-device acceptance step. A request does not authorize device actions or publication.
