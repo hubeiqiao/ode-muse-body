@@ -10,6 +10,7 @@
     <a href="docs/SETUP.md"><img src="https://img.shields.io/badge/Python-3.12-3776ab" alt="Python 3.12"></a>
     <a href="docs/HARDWARE.md"><img src="https://img.shields.io/badge/Platform-iPadOS_%2B_macOS-444444" alt="Platform: iPadOS and macOS"></a>
     <a href="https://youtu.be/0wcoqi5CVuQ"><img src="https://img.shields.io/badge/YouTube-Watch_demo-ff0033?logo=youtube&amp;logoColor=white" alt="Watch the 2:58 demo on YouTube"></a>
+    <a href="https://x.com/hubeiqiao"><img src="https://img.shields.io/badge/Follow-%40hubeiqiao-000000?logo=x&amp;logoColor=white" alt="Follow Joe Hu on X"></a>
   </p>
   <p>
     <a href="#demo">Demo</a> · <a href="#how-it-works">How it works</a> · <a href="#quick-start">Quick start</a> · <a href="docs/JUDGES.md">Judges</a> · <a href="#safety-and-limits">Safety</a> · <a href="#credits-and-license">Credits</a>
@@ -24,13 +25,15 @@
 <p align="center">
   <a href="https://youtu.be/0wcoqi5CVuQ"><img src="docs/assets/media/ode-hero.webp" width="960" alt="Muse enters the iPad, the ESP32 opens Camera, and the recorded X post appears"></a>
 </p>
-<!-- GITHUB_VIDEO_EMBED -->
+
+https://github.com/user-attachments/assets/883dbbaa-a3f9-4b56-9db3-3a5ea700166f
+
 
 <p align="center"><a href="https://youtu.be/0wcoqi5CVuQ"><strong>Watch the full 2:58 film ↗</strong></a> · <a href="docs/DEMO.md">Chapters &amp; editing disclosure</a> · <a href="docs/JUDGES.md">Two-minute judge guide</a></p>
 
 Ode sees the screen, talks with you, and taps and types in real iPad apps. **Muse Spark plans app work; an ESP32 supplies Bluetooth hands; a Mac coordinates the loop.** Gemini Live handles voice and camera conversation. Muse runs in the cloud.
 
-Built by **Joe Hu** for the **Meta Global AI Developer Hackathon**. Based on [ESP32 iPhone Agent](https://github.com/onehumanbeing/esp32-iphone-agent) by Henry Yuan.
+Built by **Joe Hu** ([@hubeiqiao](https://x.com/hubeiqiao)) for the **Meta Global AI Developer Hackathon**. Based on [ESP32 iPhone Agent](https://github.com/onehumanbeing/esp32-iphone-agent) by Henry Yuan.
 
 ## Why
 
@@ -199,4 +202,4 @@ Based on [ESP32 iPhone Agent](https://github.com/onehumanbeing/esp32-iphone-agen
 
 UxPlay is an external GPLv3 receiver, installed separately. [Dependency notices](docs/DEPENDENCIES.md) · [Contributing](CONTRIBUTING.md) · [Code of conduct](CODE_OF_CONDUCT.md) · [Documentation](docs/README.md) · [Presentation notes](docs/PRESENTATION.md).
 
-<p align="center"><strong>Built by Joe Hu for the Meta Global AI Developer Hackathon.</strong></p>
+<p align="center"><strong>Built by Joe Hu (<a href="https://x.com/hubeiqiao">@hubeiqiao</a>) for the Meta Global AI Developer Hackathon.</strong></p>
