@@ -1,7 +1,7 @@
 <div align="center">
   <img src="docs/assets/ode-avatar.png" width="112" height="112" alt="Ode, the orange companion mascot">
   <h1>Ode</h1>
-  <p><strong>Personal superintelligence needs a body. Ode gives Meta's AI one, on the devices you already own.</strong></p>
+  <p><strong>Personal superintelligence needs a body. Start with the iPad you already own.</strong></p>
   <p>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-6366f1" alt="License: MIT"></a>
     <a href="https://github.com/hubeiqiao/ode-muse-body/actions/workflows/ci.yml"><img src="https://github.com/hubeiqiao/ode-muse-body/actions/workflows/ci.yml/badge.svg" alt="Offline verification CI"></a>
@@ -17,8 +17,12 @@
   </p>
 </div>
 
-> **I gave Meta's AI a body.** It lives in my spare iPad mini now. It sees, talks, and taps real apps through a $5 ESP32.
-> **No jailbreak. No developer mode. No Xcode. No app APIs.**
+> **I gave Meta's AI a body.** Ode connects **Muse Spark** to my spare iPad mini through an ESP32 Bluetooth keyboard and mouse.
+> **No jailbreak. No developer mode. No Xcode on the iPad. No per-app control API.**
+
+**See the frontier in 20 seconds:** [Muse Spark reads rednote → ESP32 taps → the real screen changes (01:30)](https://youtu.be/0wcoqi5CVuQ?t=90). **Current setup:** Mac + calibrated iPad + cloud APIs; **~$5 covers the ESP32 board**.
+
+**Built for the solo builder with too many app tabs and too few hands.** We're building toward attended public-app research → checked findings → a draft you review, while you keep talking.
 
 Built by **Joe Hu** ([@hubeiqiao](https://x.com/hubeiqiao)) for the **Meta Global AI Developer Hackathon** · Indie Developer Track · Push the Frontier.
 
@@ -28,24 +32,23 @@ Built by **Joe Hu** ([@hubeiqiao](https://x.com/hubeiqiao)) for the **Meta Globa
   <a href="https://youtu.be/0wcoqi5CVuQ"><img src="docs/assets/ode-cover-readme-2x1.png" width="960" alt="MY iPAD IS ALIVE? — watch Ode's full demo"></a>
 </p>
 
+**53-second overview** — real device footage, edited for time.
+
 https://github.com/user-attachments/assets/883dbbaa-a3f9-4b56-9db3-3a5ea700166f
 
 <p align="center"><a href="https://youtu.be/0wcoqi5CVuQ"><strong>Watch the full 2:58 film ↗</strong></a> · <a href="docs/JUDGES.md">Two-minute judge guide</a> · <a href="docs/DEMO.md">Chapters</a></p>
 
 ## The vision
 
-Meta's mission is **personal superintelligence for everyone**. Today that intelligence lives in a chat box. It can answer, but it can't *do*: most of the apps our lives run on will never ship an API, and an AI that can only talk can't use them.
+Meta's mission is **personal superintelligence for everyone**. An AI that can only chat cannot use the apps our lives run on. Meta is already building agents that act; Ode explores one more place they could act: **the real, owner-controlled devices on our desks**.
 
-At the same time, **billions of phones and tablets sit idle in drawers.** Each one already has a screen, a camera, a microphone, a battery and every app you use.
+An old tablet already has a screen, camera, microphone, battery and native apps. **We believe those devices can have a second life as bodies for personal AI.** Apps are built for human hands; Ode connects model reasoning to that same visible interface through ordinary Bluetooth input.
 
-**Ode puts the two together. Any spare device becomes a body for your AI.**
+**Today:** an attended iPad prototype, coordinated by a Mac. It sees the mirrored screen, supports live voice/camera conversation and operates selected app workflows. Muse Spark supplies screen reasoning and Goal planning; Gemini Live carries voice/camera; calibrated skills handle familiar steps; Jev checks visual proposals.
 
-- **It sees.** The screen through mirroring, and you through the device's camera.
-- **It talks.** A live voice conversation while it works.
-- **It acts.** A $5 ESP32 is its hands: a Bluetooth keyboard and mouse, the same input a person uses. If you can tap it, Muse can tap it.
-- **It remembers and pursues goals.** A memory you control, goals it works toward, and discoveries it checks against sources.
+**The ambition: if you can tap it, your AI should be able to learn to tap it.** A growing, verified skill library could turn more of the devices we already own into useful companions, reaching people without requiring a new AI gadget. [The path from one iPad to a platform](docs/VISION.md).
 
-No jailbreak, no developer mode, no Xcode, no app APIs, nothing installed on the device. One general approach that works through the same interface humans use, on hardware people already own.
+Ode is an independent system built with the **Muse Spark API**. It does not connect to the hosted Muse app's accounts, tasks or memory. The Muse character expresses the idea; Ode is the software and orange mascot.
 
 <p align="center"><img src="docs/assets/media/ode-hero.webp" width="860" alt="Muse leaps into the iPad, the ESP32 opens Camera, and the post goes out"></p>
 
@@ -59,13 +62,13 @@ No jailbreak, no developer mode, no Xcode, no app APIs, nothing installed on the
     </td>
     <td width="50%" align="center">
       <a href="https://youtu.be/0wcoqi5CVuQ?t=89"><img src="docs/assets/media/muse-spark-hid.webp" width="460" alt="Muse Spark locates rednote search and the ESP32 taps it"></a><br>
-      <strong>Use apps with no API</strong><br>In rednote, Muse Spark finds the search box and the ESP32 taps it. A model decision becomes a physical tap.
+      <strong>Use native app screens</strong><br>In rednote, Muse Spark finds the search box and the ESP32 taps it. A model decision becomes a physical tap.
     </td>
   </tr>
   <tr>
     <td align="center">
       <a href="https://youtu.be/0wcoqi5CVuQ?t=127"><img src="docs/assets/media/goals-feed-library.webp" width="460" alt="Skills, Goals, Feed and Library"></a><br>
-      <strong>Pursue goals and remember</strong><br>24 app skills learned from real runs, a general visual agent for everything else, goals, a source-checked discovery feed and a memory you control.
+      <strong>Pursue goals and remember</strong><br>24 registered skill cards, a visual fallback for unfamiliar screens, bounded research goals, checked discoveries and an editable memory library. Acceptance is tracked separately from card registration.
     </td>
     <td align="center">
       <a href="https://youtu.be/0wcoqi5CVuQ?t=144"><img src="docs/assets/media/live-on-stage.webp" width="460" alt="Ode demonstrated on stage at Shopify Builder Sundays in Ottawa"></a><br>
@@ -78,17 +81,19 @@ No jailbreak, no developer mode, no Xcode, no app APIs, nothing installed on the
 
 ![Architecture: AirPlay screen to Mac, Muse Spark reasoning, ESP32 Bluetooth input, iPad screen feedback](docs/assets/architecture.png)
 
-1. **See.** The iPad mirrors its screen to a Mac over AirPlay; Gemini Live carries the voice and camera conversation.
+1. **See.** The iPad mirrors its screen to a Mac over AirPlay. During an active conversation, Gemini Live handles voice and camera vision.
 2. **Think.** **Muse Spark** (`muse-spark-1.3`, Meta Model API) reads the screen and plans the next step. Known apps take fast skill paths.
 3. **Act.** The Mac sends the step over Wi-Fi to the ESP32, which taps, types and swipes as a Bluetooth keyboard and mouse.
-4. **Check.** Muse reads the changed screen, keeps a receipt, and never replays an action it isn't sure landed.
+4. **Check.** Visual checks inspect the changed screen; durable task receipts and the board transport retain uncertain delivery for inspection instead of automatically repeating the input.
 
-**Proof from a real run** (01:30 in the film): Muse Spark finds rednote's search box, the board moves and clicks.
+**Proof from a real run** ([01:30 in the film](https://youtu.be/0wcoqi5CVuQ?t=90)): Muse Spark finds rednote's search box, the board moves and clicks.
 
 ```text
 muse-spark-1.3 → search-entry box [0.808, 0.035, 0.985, 0.078]   conf 0.95 · 4.3 s
-ESP32 #362 home → #363–366 move → #367 click                       ACK 0.13 s ✓
+ESP32 #362 home → #363–366 move → #367 click                final click ACK 0.132 s
 ```
+
+**These are separate clocks:** 4.287 s is one model request; 0.132 s is the final click write→board ACK, not task completion. The film supplies the visible screen change. [Exact sequence and measurement boundaries](docs/DEMO.md#sanitized-real-run-excerpt).
 
 The post Ode published in the demo is real: [x.com/hubeiqiao/status/2117654510482960846](https://x.com/hubeiqiao/status/2117654510482960846). [Architecture](docs/ARCHITECTURE.md) · [Judge guide](docs/JUDGES.md) · [Testing](docs/TESTING.md)
 
@@ -99,16 +104,26 @@ The post Ode published in the demo is real: [x.com/hubeiqiao/status/211765451048
 | **Eyes + brain** | Reads screenshots of real apps and decides the next action |
 | **Planner** | Breaks a goal into app skills, checks each result, writes the draft |
 | **Researcher** | Reads sources and saves only checked discoveries |
-| **Judge** | Backs up the visual check before risky input |
+| **Backup visual judge** | Supports proposal checks; Jev is the primary visual judge |
 
-The product is built around Meta's Muse: the whole story is giving Muse a body. Gemini Live handles real-time voice and camera, local OCR and calibrated skills handle speed, and Muse Spark makes the decisions. [Model routing](docs/ARCHITECTURE.md#model-routing).
+The engineering question is whether Meta's multimodal model can close a **pixels → decision → Bluetooth input → visible feedback** loop on an unmodified iPad. The filmed rednote step makes that question inspectable. The Camera/X sequence uses Gemini Live conversation and a calibrated skill; Goal planning and source-bound writing have linked code paths. [Current evidence matrix](docs/JUDGES.md#today-code-and-vision) · [Model routing](docs/ARCHITECTURE.md#model-routing).
+
+Built on Henry Yuan's device-control foundation, Ode adds the Muse-backed landscape iPad companion, calibrated recovery, bounded research Goals, checked discoveries, owner-controlled memory UI and durable task receipts.
 
 ## Where this goes
 
-- **Every device you own.** iPad today. The same Bluetooth-HID approach already drives iPhone in the upstream project; Android tablets, old laptops and any screen that accepts a keyboard and mouse are next.
-- **Always-on companion.** A device on your desk that watches what you point it at, works through apps while you talk to it, and keeps going toward your goals.
-- **Learns every app it touches.** Each successful run becomes a skill, so it gets faster in the apps you use most.
-- **Safe by design.** It asks before anything public, stops on uncertainty, and keeps memory under your control. [Safety](docs/SAFETY.md)
+**One personal intelligence, many possible bodies.** We want personal AI to reach billions of people through devices they already own. That is our ambition, not a count of idle devices or current users.
+
+| Stage | What we want to make possible | Evidence / next gate |
+| --- | --- | --- |
+| **Today: one real iPad** | Talk, inspect screens and act through Bluetooth; registered skills, bounded Goals and a memory UI | [Film and capability matrix](docs/JUDGES.md#today-code-and-vision) |
+| **Next: a useful daily companion** | Public-app research → checked source → review draft; candidate skills extracted from repeatable runs | Measure whole tasks, interventions and attention required; [blank acceptance sheet](docs/ACCEPTANCE.md) |
+| **Then: more devices and builders** | Guided setup, separate device profiles, reviewed community skills; evaluate iPhone/Android adaptations | Device-by-device calibration, permissions and physical acceptance; iPhone has an upstream foundation |
+| **Long term: ambient personal agency** | A desk companion that can act on approved goals; explore handoff from glasses or a pocket companion | Research direction; no glasses, Charm or hosted-Muse integration exists today |
+
+Meta's Muse, AI glasses and Muse Charm point toward personal AI across surfaces. **Our proposed complement is the action endpoint on an existing native-app device.** Imagine asking from glasses and reviewing the result on your tablet. That is a future scenario, not a shipped integration. [Official context, use cases and adoption plan](docs/VISION.md).
+
+Start with a safe read-only task, repeat it in your own setup, then contribute a skill or failure report. Checked workflows could make the next builder's setup easier. That is our open-source adoption hypothesis; we have not measured it yet.
 
 ## Quick start
 
@@ -178,7 +193,7 @@ Goals need `APP_MISSIONS=1`. Set `META_MISSION_WRITER=1` and `META_DRAFT_WRITER=
 
 ## Safety and limits
 
-Ode asks before anything public, stops instead of repeating an action it isn't sure landed, keeps memory local and owner-controlled, and keeps purchases, passwords and sensitive settings with the human. It needs a Mac, a one-time calibration and cloud APIs; the $5 is the board. The film is edited for time with speeds marked. [Safety & data flow](docs/SAFETY.md) · [Editing disclosure](docs/DEMO.md) · [Security](SECURITY.md)
+The guarded photo flow consumes fresh owner confirmation before sending. Durable receipts and uncertain-delivery handling help prevent replay; the owner checks the account, exact draft and visible outcome. Use attended tasks and keep purchases, passwords and sensitive settings human-operated. Memory is stored on the Mac; selected text and active-session frames can reach cloud models. The film is edited for time with speeds marked. [Safety & data flow](docs/SAFETY.md) · [Editing disclosure](docs/DEMO.md) · [Security](SECURITY.md)
 
 ## Credits and license
 

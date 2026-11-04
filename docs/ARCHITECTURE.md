@@ -3,7 +3,7 @@
 [Documentation](README.md) · [Project](../README.md)
 
 
-Muse lives on an idle iPad, talks to its owner, and operates the device through physical Bluetooth input. The Mac hosts the model clients, screen receiver, orchestration and local state. The iPad needs no agent app or jailbreak.
+Ode is an independent Muse Spark API system that talks to its owner and operates an iPad through physical Bluetooth input. The Muse character is a narrative device; no hosted-Muse account, task or memory integration is present. The Mac hosts the model clients, screen receiver, orchestration and local state. The iPad needs no agent app or jailbreak.
 
 ![System architecture](assets/architecture.png)
 

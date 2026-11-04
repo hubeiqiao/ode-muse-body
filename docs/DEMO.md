@@ -4,6 +4,13 @@
 
 The home footage was recorded November 3, 2026. Stage footage is from Shopify Builder Sundays, Ottawa, November 1. These positions follow **VIDEO-METADATA-v6.md, updated November 4 for the 00:24 render**: 5,359 frames at 30 fps, **2:58.63**. They are film positions, not task latency measurements.
 
+## Watch for two different kinds of proof
+
+- **Meta in the physical loop:** [01:30](https://youtu.be/0wcoqi5CVuQ?t=90), a real Muse Spark target decision becomes ESP32 input and a changed rednote screen.
+- **A companion people can understand:** [00:29](https://youtu.be/0wcoqi5CVuQ?t=29), voice/camera conversation, a photo, fresh owner confirmation and an existing public result. This sequence uses Gemini Live and a calibrated skill.
+
+The product use case to validate next is a complete public-app research → checked source → review draft task. [Today's evidence tiers](JUDGES.md#today-code-and-vision) · [Vision](VISION.md) · [Blank physical-run sheet](ACCEPTANCE.md).
+
 ## Chapters for the final v6 cut
 
 Keep these seven chapter starts aligned with the accepted video description. The ESP32 explainer shares the Meet Ode chapter; the end card shares the stage chapter. Meet Ode's exact start is 00:09.70; its chapter rounds to 00:10 so the opening chapter is at least ten seconds.
@@ -60,6 +67,8 @@ relative_s  command_id  command  write→ACK_s  accepted
 50.976      367         click    0.132        true
 ```
 
+The listed HID sequence spans 6.343 s from the first `home` write to the final click ACK (44.765 → 50.976 + 0.132). This includes movement and gaps; the separate model duration must not be added without a shared timeline. It is not a whole-task benchmark.
+
 A board ACK establishes acceptance by the board. The changed screen in the film establishes the visual effect. A model's confidence is its own score, not a calibrated correctness rate. This single step cannot establish average latency, arbitrary-app compatibility or system-wide reliability.
 
 ## How to evaluate without replaying publication
@@ -70,7 +79,7 @@ The photo flow's terminal label can mean the composer closed. It alone does not 
 
 ## Companion and capability boundaries
 
-The mobile browser controls the Mac-hosted companion. These selected captures show saved local state, not a newly executed device acceptance run. Only the public-safe Library image is included.
+The mobile browser controls the Mac-hosted companion. These selected captures show saved local state, not a newly executed device acceptance run. Only the public-safe Library image is included. The Goals screenshot's “Device checks: Jev / Haiku” comes from static display text in [MissionPanel.jsx](../companion-ui/src/MissionPanel.jsx); it is not a runtime routing report. This submission configures Jev as primary and Meta as fallback, as shown in [model routing](ARCHITECTURE.md#model-routing).
 
 <table>
 <tr><td align="center"><img src="assets/companion-mobile/home.png" width="220" alt="Chat with a saved checked discovery"><br>Chat</td><td align="center"><img src="assets/companion-mobile/goals.png" width="220" alt="Goals with Muse Spark planner and explicit bounds"><br>Goals</td></tr>

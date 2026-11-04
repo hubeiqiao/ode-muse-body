@@ -7,6 +7,8 @@
 | I want to… | Read |
 | --- | --- |
 | Watch and understand the evidence | [Demo, chapters and editing disclosure](DEMO.md) |
+| Understand the ambition and adoption path | [Vision, stages and Meta ecosystem context](VISION.md) |
+| Record physical task evidence | [Blank acceptance sheet](ACCEPTANCE.md) |
 | Evaluate the hackathon entry | [Two-minute judge guide](JUDGES.md) |
 | Install Ode | [Setup and first-run acceptance ladder](SETUP.md) |
 | Prepare the ESP32 | [Hardware, backup, pairing and calibration](HARDWARE.md) |

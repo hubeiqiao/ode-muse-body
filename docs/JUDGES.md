@@ -4,6 +4,18 @@
 
 **Indie Developer Track · Push the Frontier:** connect Muse screen reasoning to physical iPad input.
 
+## The case in 30 seconds
+
+**New capability:** Muse Spark screen reasoning becomes physical Bluetooth input on an unmodified iPad. **First intended user:** a solo builder/creator researching public app content and preparing work for review. **Long-term ambition:** useful bodies for personal AI on devices people already own. [Vision and adoption path](VISION.md).
+
+Start at [01:30](https://youtu.be/0wcoqi5CVuQ?t=90): real app pixels → Spark target → ESP32 input → changed screen. Then inspect the result and source map below. Ode is built with the Muse Spark API; it is not a client for the hosted Muse app's accounts, tasks or memory.
+
+| 1 · Observe | 2 · Decide | 3 · Act | 4 · Inspect |
+| --- | --- | --- | --- |
+| Real rednote screen mirrored to Mac | Muse Spark returns the search-entry box | Calibrated motion → ESP32 Bluetooth click | Search opens on the real iPad; retain the receipt |
+
+This is the selected filmed locate call, not a new model call at every tap. The [exact record](DEMO.md#sanitized-real-run-excerpt) separates model time from input acknowledgement.
+
 ## A two-minute review path
 
 - **First 25 seconds of your review:** watch [film 01:30–01:46](https://youtu.be/0wcoqi5CVuQ?t=90) and compare the [sanitized model/HID excerpt](DEMO.md#sanitized-real-run-excerpt). Muse Spark locates rednote's search target; ESP32 input changes the real screen. This is one selected step, not proof of model planning at every tap.
@@ -23,12 +35,35 @@ Henry Yuan's ESP32 iPhone Agent supplies the original device-control foundation.
 
 | Criterion | Evidence | Why it matters / boundary |
 | --- | --- | --- |
-| **Impact — 30%** | Film 00:29, 01:17 and README features; real [X output](https://x.com/hubeiqiao/status/2117654510482960846); source-bearing Feed screenshot | Intended for builders/creators with a Mac and spare iPad: attended app research, checked findings and review drafts without a separate integration per app. The board is ~$5; Mac/tablet/APIs are additional. No measured time-saving or accessibility-product claim. |
+| **Impact — 30%** | Film 00:29, 01:17 and README features; real [X output](https://x.com/hubeiqiao/status/2117654510482960846); source-bearing Feed screenshot | First intended use: a solo builder/creator moves from public-app research to checked findings and a local review draft, using existing hardware. [Vision/adoption hypothesis](VISION.md). This complete chain and time-saving still need measured acceptance; ~$5 is the board, with Mac/tablet/APIs additional. |
 | **Use of Meta AI Tooling — 25%** | Film 01:30.17; `muse-spark-1.3` decision excerpt; [Meta client](../server/hidagent/meta_model.py), [hybrid actor](../server/hidagent/hybrid_agent.py), [Goal planner](../server/hidagent/app_mission.py), [draft writer](../server/hidagent/app_tools.py) | Spark makes device decisions and source-bound writing decisions. Jev is the primary judge; Gemini handles voice/camera. Optional Meta profiles are not extra demo models. |
 | **Demo — 25%** | Film 00:29–01:17 causal sequence, existing result, 02:24 stage excerpt; [timestamp/edit disclosure](DEMO.md) | Real physical iPad footage and owner interaction. Hook is composited; time is compressed; rednote answer uses the search AI summary. Publication uncertainty was not retried. |
 | **Technical Depth & Execution — 20%** | [Architecture](ARCHITECTURE.md), geometry/input, no-replay and source tests below, source + rebuilt UI, iPad firmware | Calibration, evidence checks and cancellation connect model proposals to physical input. Offline checks do not establish live app coverage. |
 
 A shareable hook is already available: Muse entering a spare iPad, followed by the board visibly operating it. The existing X result provides a public result link; no views, likes, repost counts or viral bonus are claimed.
+
+## Today, code and vision
+
+| Capability | Evidence tier | Inspect |
+| --- | --- | --- |
+| Muse Spark target → physical input → screen change | **Filmed selected step** | [rednote 01:30](https://youtu.be/0wcoqi5CVuQ?t=90), [sanitized record](DEMO.md#sanitized-real-run-excerpt) |
+| Camera conversation → photo → owner-confirmed send | **Filmed physical workflow + existing public result** | [00:29](https://youtu.be/0wcoqi5CVuQ?t=29); Gemini Live + calibrated Camera/X skill; [result](https://x.com/hubeiqiao/status/2117654510482960846) |
+| Bounded Goals and source-bound review drafts | **Implemented code; saved-state UI in film** | [Goal planner](../server/hidagent/app_mission.py), [writer](../server/hidagent/app_tools.py); not a new full-chain run |
+| Feed / editable memory | **Selected discovery and saved-state UI + code** | [Companion evidence and data boundaries](DEMO.md#companion-and-capability-boundaries) |
+| 24 app skill cards | **Registered inventory** | [Card index](../app-skills/index.json), [acceptance loader](../server/hidagent/app_cards.py); not 24 full-app validations |
+| General visual fallback | **Implemented general path; selected filmed visual targeting** | [Hybrid actor](../server/hidagent/hybrid_agent.py); the filmed call locates a target, not a complete unfamiliar-app task; broader reliability remains to be measured |
+| Multi-device profiles, checked skill growth, glasses/Charm handoff | **Roadmap** | [Vision](VISION.md); no shipped external integration |
+
+## Failure state is part of the product
+
+| Situation | Implemented behavior / evidence | Operator interpretation |
+| --- | --- | --- |
+| Same request after restart | Durable request identity returns saved history without new model/HID execution | Inspect the saved receipt; previously in-flight requests become interrupted. A restart does not authorize replay |
+| ACK lost after a possible write | Transport records ambiguous delivery instead of retrying payload | Inspect actual device; uncertainty is not failure permission to resend |
+| Photo send begins | Pending draft is consumed before awaited send | One-use send; owner must still check exact account/text/photo and visible outcome |
+| Stop / late model result | Revocable input ownership and cancellation checks; voice timing heuristics have limits | Inspect release receipt and actual input; [known limits](SAFETY.md) |
+
+The [offline failure map](TESTING.md#failure-handling--inspectable-regressions) links concrete regressions. The [physical acceptance sheet](ACCEPTANCE.md) is blank: it specifies the next evidence rather than inventing a reliability result.
 
 ## Three engineering decisions to inspect
 
