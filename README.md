@@ -13,7 +13,7 @@
   </p>
 </div>
 
-> **I gave Meta's AI a body.** It lives in my spare iPad mini now. It sees, talks, and taps real apps through a $5 ESP32.
+> **I gave Muse a body.** It lives in my spare iPad mini now and fully operates it: it sees, talks, and taps real apps through a $5 ESP32.
 > **No jailbreak. No developer mode. No Xcode. No app APIs.**
 
 **See it in 20 seconds:** [Muse Spark reads the screen → the ESP32 taps → the real app responds (01:30)](https://youtu.be/0wcoqi5CVuQ?t=90) · **Personal superintelligence needs a body.** [The vision →](#the-vision)
