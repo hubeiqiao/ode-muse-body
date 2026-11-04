@@ -13,12 +13,10 @@
   </p>
 </div>
 
-> **I gave Meta's AI a body.** Ode connects **Muse Spark** to my spare iPad mini through an ESP32 Bluetooth keyboard and mouse.
-> **No jailbreak. No developer mode. No Xcode on the iPad. No per-app control API.**
+> **I gave Meta's AI a body.** It lives in my spare iPad mini now. It sees, talks, and taps real apps through a $5 ESP32.
+> **No jailbreak. No developer mode. No Xcode. No app APIs.**
 
-**See the frontier in 20 seconds:** [Muse Spark reads rednote → ESP32 taps → the real screen changes (01:30)](https://youtu.be/0wcoqi5CVuQ?t=90). **Current setup:** Mac + calibrated iPad + cloud APIs; **~$5 covers the ESP32 board**.
-
-**Built for the solo builder with too many app tabs and too few hands.** We're building toward attended public-app research → checked findings → a draft you review, while you keep talking.
+**See it in 20 seconds:** [Muse Spark reads the screen → the ESP32 taps → the real app responds (01:30)](https://youtu.be/0wcoqi5CVuQ?t=90) · **Personal superintelligence needs a body.** [The vision →](#the-vision)
 
 Built by **Joe Hu** ([@hubeiqiao](https://x.com/hubeiqiao)) for the **Meta Global AI Developer Hackathon** · Indie Developer Track · Push the Frontier.
 
@@ -36,15 +34,20 @@ https://github.com/user-attachments/assets/883dbbaa-a3f9-4b56-9db3-3a5ea700166f
 
 ## The vision
 
-Meta's mission is **personal superintelligence for everyone**. An AI that can only chat cannot use the apps our lives run on. Meta is already building agents that act; Ode explores one more place they could act: **the real, owner-controlled devices on our desks**.
+Meta's mission is **personal superintelligence for everyone**. Today that intelligence lives in a chat box. It can answer, but it can't *do*: most of the apps our lives run on will never ship an API, and an AI that can only talk can't use them.
 
-An old tablet already has a screen, camera, microphone, battery and native apps. **We believe those devices can have a second life as bodies for personal AI.** Apps are built for human hands; Ode connects model reasoning to that same visible interface through ordinary Bluetooth input.
+At the same time, **billions of phones and tablets sit idle in drawers.** Each one already has a screen, a camera, a microphone, a battery and every app you use.
 
-**Today:** an attended iPad prototype, coordinated by a Mac. It sees the mirrored screen, supports live voice/camera conversation and operates selected app workflows. Muse Spark supplies screen reasoning and Goal planning; Gemini Live carries voice/camera; calibrated skills handle familiar steps; Jev checks visual proposals.
+**Ode puts the two together. Any spare device becomes a body for your AI.**
 
-**The ambition: if you can tap it, your AI should be able to learn to tap it.** A growing, verified skill library could turn more of the devices we already own into useful companions, reaching people without requiring a new AI gadget. [The path from one iPad to a platform](docs/VISION.md).
+- **It sees.** The screen through mirroring, and you through the device's camera.
+- **It talks.** A live voice conversation while it works.
+- **It acts.** A $5 ESP32 is its hands: a Bluetooth keyboard and mouse, the same input a person uses. If you can tap it, Muse can tap it.
+- **It remembers and pursues goals.** A memory you control, goals it works toward, and discoveries it checks against sources.
 
-Ode is an independent system built with the **Muse Spark API**. It does not connect to the hosted Muse app's accounts, tasks or memory. The Muse character expresses the idea; Ode is the software and orange mascot.
+**Where it goes next:** one personal intelligence, many bodies. Your glasses hear the intent, your old tablet does the work, and every app it learns becomes a reviewed skill the next device can use. [The path from one iPad to a platform →](docs/VISION.md)
+
+<sub>Ode is an independent open-source system built on the Muse Spark API; it is not connected to the Muse app's accounts. Muse character: Meta, not affiliated.</sub>
 
 <p align="center"><img src="docs/assets/media/ode-hero.webp" width="860" alt="Muse leaps into the iPad, the ESP32 opens Camera, and the post goes out"></p>
 
