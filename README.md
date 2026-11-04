@@ -6,11 +6,7 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-6366f1" alt="License: MIT"></a>
     <a href="https://github.com/hubeiqiao/ode-muse-body/actions/workflows/ci.yml"><img src="https://github.com/hubeiqiao/ode-muse-body/actions/workflows/ci.yml/badge.svg" alt="Offline verification CI"></a>
     <a href="#meta-ai-at-the-core"><img src="https://img.shields.io/badge/Meta-Muse_Spark-0866ff" alt="Meta Muse Spark"></a>
-    <a href="docs/JUDGES.md"><img src="https://img.shields.io/badge/Meta_AI-Hackathon-ff824d" alt="Meta Global AI Developer Hackathon entry"></a>
-    <a href="docs/SETUP.md"><img src="https://img.shields.io/badge/Python-3.12-3776ab" alt="Python 3.12"></a>
-    <a href="docs/HARDWARE.md"><img src="https://img.shields.io/badge/Platform-iPadOS_%2B_macOS-444444" alt="Platform: iPadOS and macOS"></a>
     <a href="https://youtu.be/0wcoqi5CVuQ"><img src="https://img.shields.io/badge/YouTube-Watch_demo-ff0033?logo=youtube&amp;logoColor=white" alt="Watch the 2:58 demo on YouTube"></a>
-    <a href="https://x.com/hubeiqiao"><img src="https://img.shields.io/badge/Follow-%40hubeiqiao-000000?logo=x&amp;logoColor=white" alt="Follow Joe Hu on X"></a>
   </p>
   <p>
     <a href="#the-vision">Vision</a> · <a href="#demo">Demo</a> · <a href="#how-it-works">How it works</a> · <a href="#quick-start">Quick start</a> · <a href="docs/JUDGES.md">Judges</a> · <a href="#safety-and-limits">Safety</a> · <a href="#credits-and-license">Credits</a>
