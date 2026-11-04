@@ -344,7 +344,7 @@ BUSY_SYSTEM = ('\nFor EVERY device tool, when its receipt says running, in_progr
                'and sends [TASK FINISHED]. On [TASK FINISHED], ALWAYS tell the owner aloud immediately what finished '
                'and its result in one or two short sentences, including failures/stops/uncertainty; do not call tools. '
                'Never narrate progress or repeat a running request. If the owner says stop, call stop_phone.')
-BUSY_INSTRUCTION = ('A device task is still running. Stay silent; you will be told when it finishes. '
+BUSY_INSTRUCTION = ('Not a failure: a device task is still running and you are already on it. Do NOT say you cannot do it. Stay silent; you will be told when it finishes. '
                     'Do NOT call phone_status or resubmit input. If the owner corrected or added something, '
                     'call add_to_current_task with their words instead.')
 # Spoken corrections can be attached to the current task.
@@ -415,7 +415,7 @@ def camera_setup_fields():
 
 
 def check_local(request: Request):
-    """Loopback by default; remote authorization is set only by the ASGI gate."""
+    """Loopback by default; remote authorization is set only by the ASGI gate (hidagent.access)."""
     if request.scope.get("ode_remote_authorized") is True:
         return
     if not request.client or request.client.host not in ('127.0.0.1', '::1', 'testclient'):
@@ -436,6 +436,11 @@ class CameraFrameRequest(BaseModel):
 
 class EndSession(BaseModel):
     session: str = Field(min_length=16, max_length=128)
+
+
+class ScreenFrameRequest(BaseModel):
+    session: str = Field(min_length=16, max_length=128)
+    fresh: bool = False
 
 
 class VoiceControl(BaseModel):
@@ -1058,11 +1063,15 @@ class VoiceBridge:
                        'Wait for its receipt and read the caption aloud, then ask for confirmation. '
                        'Do not call any other action tool for it. Historical conversation and Hello are not new actions. '
                        'Never replay take_photo, open Camera or start_camera_conversation for this follow-up.')
+        setup = {'model': f'models/{MODEL}', 'generationConfig': {'responseModalities': ['AUDIO']},
+                 'systemInstruction': {'parts': [{'text': system}]}, 'tools': tools,
+                 'inputAudioTranscription': {}, 'outputAudioTranscription': {},
+                 'realtimeInputConfig': {'automaticActivityDetection': {'silenceDurationMs': 450}}}
+        if self.driver_name == 'esp32':
+            # The live screen streams into every session; low-resolution frames keep replies quick.
+            setup['generationConfig']['mediaResolution'] = 'MEDIA_RESOLUTION_LOW'
         return {**({'startup': startup} if startup else {}), 'token': token, 'session': sid, 'model': MODEL,
-                'setup': {'model': f'models/{MODEL}', 'generationConfig': {'responseModalities': ['AUDIO']},
-                          'systemInstruction': {'parts': [{'text': system}]}, 'tools': tools,
-                          'inputAudioTranscription': {}, 'outputAudioTranscription': {},
-                          'realtimeInputConfig': {'automaticActivityDetection': {'silenceDurationMs': 450}}}}
+                'setup': setup}
 
     def _read_voice_task(self, watch):
         if watch.get('final') is None:
@@ -1119,14 +1128,41 @@ class VoiceBridge:
             session = self.sessions.get(call.session)
             if session and session['expires'] > time.monotonic():
                 self._capture_voice_tasks(session)
-            result = voice_receipt(await self._call(call), started=call.name != 'phone_status')
+                stopping = session.get('stopping')
+                if call.name == 'stop_phone' and time.monotonic() - session.get('last_action_at', 0) < 1.5:
+                    # stop_phone sent together with a brand-new action in the same model turn:
+                    # the new action is the owner's current intent, so it is not cancelled.
+                    log.info('voice stop ignored: arrived with a new action')
+                    result = {'status': 'ignored', 'terminal': True, 'running': False,
+                              'instruction': 'The new request is already running; stay silent until it finishes.'}
+                    log.info('voice tool result name=%s id=%s status=ignored', call.name, call.id)
+                    return result
+                if call.name == 'stop_phone':
+                    session['stopping'] = asyncio.Event()
+                elif call.name not in ('phone_status',) and stopping is not None:
+                    # The model often sends stop_phone and the owner's NEXT action together
+                    # ("stop that, now open rednote"). Let the stop finish, then run the new action.
+                    await stopping.wait()
+                    if (session.get('paused') and call.id not in session.get('cancelled_ids', set())
+                            and time.monotonic() - session.get('stopped_by_tool_at', 0) < 8):
+                        session['paused'] = False
+                        log.info('voice resumed for new action after model stop name=%s', call.name)
+                if call.name in DEVICE_TOOL_NAMES | IPAD_CAMERA_ACTIONS | {'ipad_demo', 'use_app_tool', 'phone_explore', 'start_app_goal'}:
+                    session['last_action_at'] = time.monotonic()
+            try:
+                result = voice_receipt(await self._call(call), started=call.name != 'phone_status')
+            finally:
+                if call.name == 'stop_phone' and session and isinstance(session.get('stopping'), asyncio.Event):
+                    session['stopped_by_tool_at'] = time.monotonic()
+                    session['stopping'].set()
             result = self._track_voice_task(call, result)
         except BaseException as exc:
             log.info('voice tool result name=%s id=%s status=%s', call.name, call.id,
                      'cancelled' if isinstance(exc, asyncio.CancelledError) else
                      'rejected' if isinstance(exc, HTTPException) else 'error')
             raise
-        log.info('voice tool result name=%s id=%s status=%s', call.name, call.id, result.get('status', 'unknown'))
+        log.info('voice tool result name=%s id=%s status=%s%s', call.name, call.id, result.get('status', 'unknown'),
+                 (' reason=' + str(result.get('reason'))[:160]) if result.get('status') in ('rejected', 'failed', 'not_ready', 'busy', 'stopped', 'uncertain') and result.get('reason') else '')
         return result
 
     async def _call(self, call):
@@ -1268,8 +1304,14 @@ class VoiceBridge:
             return await self._camera_action_result(task)
         if len(calls) >= 128:
             return receipt('rejected', reason='Camera action limit reached')
+        running = session.get('camera_action_task')
+        if running is not None and not running.done() and session.get('camera_action_name') == call.name:
+            # Gemini often repeats the same request while it runs: join it, never answer "busy".
+            log.info('voice tool joined running camera action name=%s', call.name)
+            return await self._camera_action_result(running)
         if self._console_busy() or (self.state().get('control_activity') or {}).get('manual_running') or (self.camera and self.camera.active()):
-            return receipt('busy', reason='Another task owns the console')
+            return {'status': 'busy', 'running': True, 'terminal': False, 'reason': 'Another task owns the console',
+                    'instruction': BUSY_INSTRUCTION}
 
         from .full_screen_state import identity
         device_identity = identity(self.state().get('target') or {})
@@ -1323,6 +1365,7 @@ class VoiceBridge:
         calls[key] = (signature, task)
         session['camera_action_ids'][call.id] = key
         session['camera_action_task'] = task
+        session['camera_action_name'] = call.name
         return await self._camera_action_result(task)
 
     async def call_demo(self, call, session):
@@ -1338,9 +1381,18 @@ class VoiceBridge:
             arguments = dict(call.args)
             if arguments.get('action') == 'yolo' and call.utterance.strip():
                 arguments['query'] = call.utterance.strip()
+            if arguments.get('action') == 'x_photo_draft':
+                # Never bounce a photo post on argument shape: default the account and make
+                # the caption one safe printable line (owner words first, then a default).
+                from .camera_handoff import caption_draft
+                arguments.setdefault('account', '@example_creator')
+                text = ' '.join(str(arguments.get('text') or '').split())
+                text = ''.join(c for c in text if c.isascii() and c.isprintable())[:240].strip()
+                owner = ''.join(c for c in (caption_draft(call.utterance, '') or '') if c.isascii() and c.isprintable()).strip()
+                arguments['text'] = text or owner or 'Taken by Ode, my AI living on an old iPad.'
             request = DemoRequest.model_validate(arguments)
-        except ValueError:
-            return receipt('rejected', reason='Invalid bounded demo arguments')
+        except ValueError as error:
+            return receipt('rejected', reason='Invalid bounded demo arguments: ' + str(error).splitlines()[0][:160])
         calls = session.setdefault('demo_calls', {})
         signature = json.dumps(call.args, sort_keys=True)
         # Only one instance of an action per current human input, even if the
@@ -1354,7 +1406,8 @@ class VoiceBridge:
         if len(calls) >= 128:
             return receipt('rejected', reason='Demo voice-call limit reached')
         if self._console_busy():
-            return receipt('busy', reason='Another task owns the console')
+            return {'status': 'busy', 'running': True, 'terminal': False, 'reason': 'Another task owns the console',
+                    'instruction': BUSY_INSTRUCTION}
         async def execute_demo():
             async with self.command_lock:
                 if (self.sessions.get(call.session) is not session or session.get('paused')
@@ -1824,7 +1877,7 @@ def router_for(bridge):
         return JSONResponse(await bridge.mint(resume_camera=resume_camera, voice_handoff=handoff), headers={"Cache-Control": "no-store"})
 
     @router.post('/screen/frame')
-    def voice_screen_frame(body: EndSession, request: Request):
+    def voice_screen_frame(body: ScreenFrameRequest, request: Request):
         """Normal iPad voice only: the local mirror, resized in memory, never saved."""
         check_local(request)
         session = bridge.sessions.get(body.session)
@@ -1838,9 +1891,16 @@ def router_for(bridge):
         screen = bridge.screen
         if screen is None or not screen.live:
             return Response(status_code=204, headers=headers)
-        frame, updated = screen.frame, screen.updated
-        if not frame or not updated or not 0 <= time.time() - updated <= 5:
+        frame = screen.frame
+        if not frame:
             return Response(status_code=204, headers=headers)
+        # AirPlay sends nothing while the iPad screen is still, so an old frame is still the
+        # current screen: never drop it for age. Skip frames identical to the last one sent to this session (unless the page asks for a
+        # fresh one before a tool result): fewer images to digest means faster replies.
+        digest = hashlib.sha256(frame).digest()
+        if not body.fresh and session.get('last_screen_digest') == digest:
+            return Response(status_code=204, headers=headers)
+        session['last_screen_digest'] = digest
         try:
             with Image.open(io.BytesIO(frame)) as source:
                 image = source.convert('RGB')

@@ -64,3 +64,9 @@ After actual screen/calibration/full-screen checks, use `IPAD_VOICE_DEMOS=1` for
 | `ODE_PUBLIC_ORIGIN`, `ODE_ACCESS_ISSUER`, `ODE_ACCESS_AUD`, `ODE_OWNER_TOKEN` | Optional remote origin authorization; see tunnel guide |
 
 `server/.env.example` intentionally has no values. Fill only private credentials or explicitly selected overrides. `scripts/run-ode.sh` loads the operator-owned file and runs the already installed server. Do not download or source an untrusted environment file.
+
+## Goals and exploration
+
+After device readiness and read-only acceptance, set `APP_MISSIONS=1` for Goals. Select hosted Spark planning/writing with `META_MISSION_WRITER=1` and `META_DRAFT_WRITER=1`; model overrides inherit `META_MODEL` unless explicitly selected. `EXPLORATION_PUBLIC_BROWSER=1` enables the public exploration path. Sessions require an explicit start and are bounded; enabling a feature is not permission to publish or replay history. The sample screenshots show saved local state; a fresh checkout has no populated Feed or Library.
+
+Public demo prompts use synthetic `@example_creator` account labels. Configure and verify your own selected account locally before any explicitly authorized send; example text is never account verification.

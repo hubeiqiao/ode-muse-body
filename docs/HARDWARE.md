@@ -1,6 +1,6 @@
 # Ode — Give Muse a body: hardware
 
-Muse's hands are an ESP32-C3 Bluetooth keyboard and mouse. Its eyes come from AirPlay. The board uses Wi-Fi to receive commands from the Mac; USB is for board power, backup and flashing only.
+Muse's hands are an ESP32-C3 Bluetooth keyboard and mouse. Its eyes come from AirPlay. The board connects outward over Wi-Fi/TCP to the Mac server; USB is for board power, backup and flashing only.
 
 ## Parts and wiring
 
@@ -8,7 +8,7 @@ Muse's hands are an ESP32-C3 Bluetooth keyboard and mouse. Its eyes come from Ai
 - An ESP32-C3 development board, approximately $5 depending on supplier.
 - A USB data cable and Mac on the same trusted local network as the board/iPad.
 
-There is **no GPIO wiring to the iPad**. Connect only the ESP32 to the Mac's USB port. Pair the firmware's Bluetooth device with the iPad. Do not select an unrelated board or flash a phone/iPad.
+The ~$5 estimate covers only the development board; the Mac, iPad, USB cable, network and cloud API usage are additional requirements. There is **no GPIO wiring to the iPad**. Connect only the ESP32 to the Mac's USB port. Pair the firmware's Bluetooth device with the iPad. Do not select an unrelated board or flash a phone/iPad.
 
 ## Install the build tools
 

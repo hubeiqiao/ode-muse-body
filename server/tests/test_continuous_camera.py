@@ -176,3 +176,21 @@ def test_camera_whitelist_applies_without_a_camera_session():
         with pytest.raises(RuntimeError):
             check_hid('type forbidden')
     check_hid('type allowed_outside_window')  # fake lease check only, no hardware
+
+
+def test_repeated_same_camera_request_joins_running_action():
+    async def scenario():
+        b, cam, _, sid = normal()
+        release = asyncio.Event()
+        async def launch():
+            await release.wait()
+        cam.detector.launch_camera.side_effect = launch
+        first = asyncio.create_task(b.call(command(sid, 'open_camera')))
+        await asyncio.sleep(0)
+        second = asyncio.create_task(b.call(command(sid, 'open_camera', 2)))
+        await asyncio.sleep(0)
+        release.set()
+        assert (await first)['status'] == 'camera_opened'
+        assert (await second)['status'] == 'camera_opened'
+        assert cam.detector.launch_camera.await_count == 1
+    asyncio.run(scenario())

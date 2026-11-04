@@ -65,12 +65,11 @@ def test_screen_session_and_local_origin_gates():
     assert post({'session': SID}).status_code == 410
 
 
-@pytest.mark.parametrize('change', ['missing', 'offline', 'stale', 'corrupt'])
+@pytest.mark.parametrize('change', ['missing', 'offline', 'corrupt'])
 def test_no_fresh_mirror_returns_no_content(change):
     bridge, _, client = fixture()
     if change == 'missing': bridge.screen.frame = None
     if change == 'offline': bridge.screen.live = False
-    if change == 'stale': bridge.screen.updated = time.time() - 6
     if change == 'corrupt': bridge.screen.frame = b'not an image'
     result = client.post('/api/voice/screen/frame', json={'session': SID})
     assert result.status_code == 204 and result.content == b''
@@ -85,3 +84,12 @@ def test_ipad_prompt_describes_live_screen_and_keeps_action_tools():
     assert 'NEVER device images' not in prompt
     assert 'has no video' not in prompt
     assert 'conversation has no video' not in str(tools)
+
+
+def test_still_screen_is_sent_once_then_skipped_unless_fresh():
+    # AirPlay sends no new frames while the iPad is still: the last frame is still current.
+    bridge, _, client = fixture()
+    bridge.screen.updated = time.time() - 60
+    assert client.post('/api/voice/screen/frame', json={'session': SID}).status_code == 200
+    assert client.post('/api/voice/screen/frame', json={'session': SID}).status_code == 204
+    assert client.post('/api/voice/screen/frame', json={'session': SID, 'fresh': True}).status_code == 200

@@ -431,6 +431,15 @@ class AppTools:
                     elif name.endswith('.search'):
                         payload={'goal':'APP_PUBLIC_SEARCH '+json.dumps({'app':tool['app'],'query':args['query'],**({'read_result':True} if args.get('read_result') else {})},ensure_ascii=False)}
                     elif name=='keyboard.type_focused':payload={'goal':'type '+json.dumps(args['text'],ensure_ascii=False)}
+                    if name.endswith('.search') or name.endswith('.open'):
+                        # Leave whatever is on screen (an X composer, a picker, a video) before
+                        # launching: sheets and modals made the launch route misread the scene.
+                        phone=getattr(getattr(self.result_reader,'agent',None),'phone',None)
+                        if phone is not None and asyncio.iscoroutinefunction(getattr(type(phone),'recover_home',None)):
+                            try:
+                                await phone.recover_home();self._active(epoch)
+                            except Exception as error:
+                                log.info('pre-launch home failed name=%s error=%s',name,type(error).__name__)
                     receipt=await self.bridge.execute(call_name,payload,_app_tool=True)
                     task_id=receipt.get('task_id');self._remember_device_receipt(e,receipt)
                     while receipt.get('running'):

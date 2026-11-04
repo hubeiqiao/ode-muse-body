@@ -12,9 +12,9 @@ Muse lives on an idle iPad, talks to its owner, and operates the device through 
 
 `Phone` converts intended screen points into calibrated HID motion. Visible-pointer measurements can correct movement. If an app hides the mirrored pointer, the calibrated re-home path starts from a known corner and verifies subsequent state. Calibration, geometry, stability and ownership checks still apply; hidden-pointer handling does not establish universal click accuracy.
 
-`Device` sends commands over a local TCP connection to the ESP32-C3. `hid_bridge_ble_c3.ino` emits BLE keyboard/mouse reports. The iPad sees ordinary paired input hardware. The board's network listener and AirPlay stay on a trusted local network; the public HTTPS tunnel never exposes their ports.
+`Device` sends commands over a local TCP connection to the ESP32-C3. `hid_bridge_ble_c3.ino` emits BLE keyboard/mouse reports. The iPad sees ordinary paired input hardware. The Mac's board TCP listener and AirPlay stay on a trusted local network; the public HTTPS tunnel never exposes their ports.
 
-`AppTools`, `DriverExecutor` and `hid_lease` coordinate ownership, cancellation and task receipts. An uncertain receipt must not be resent. A model's “done” is not proof of a visible result. Guarded photo publishing binds confirmation to the pending task, checks caption/attachment and avoids duplicate sends.
+`AppTools`, `DriverExecutor` and `hid_lease` coordinate ownership, cancellation and task receipts. An uncertain receipt must not be resent. A model's “done” is not proof of a visible result. Guarded photo publishing binds one-use confirmation to the pending task and checks attachment/nonempty caption. The owner must inspect account and exact caption; a closed composer alone is not independent publication proof.
 
 ## Live conversation and camera
 
@@ -30,7 +30,7 @@ Local icon/picker matching and Camera controls depend on layout-bound masked tem
 | --- | --- |
 | `AGENT_ENGINE=meta_hybrid`, `META_MODEL=muse-spark-1.3` | `meta_llm()` supplies `HybridAgent`'s model client and the backup `VisionJudge`; Meta endpoint is fixed to `https://api.meta.ai/v1`. The companion uses `agent.actor`. |
 | Primary proposal judge | `Jev.from_env()`: `JEV_MODEL` defaults to `jev-latest`, credentials from `TYPESAFE_API_KEY` or explicitly supplied `JEV_KEY_FILE`. |
-| Optional mission/draft writer | `META_MISSION_WRITER=1` / `META_DRAFT_WRITER=1` select hosted Meta clients with `mission` / `draft` roles. `META_MISSION_MODEL` / `META_DRAFT_MODEL` otherwise inherit `META_MODEL`. These flags are off in the quick start. |
+| Optional mission/draft writer | `META_MISSION_WRITER=1` / `META_DRAFT_WRITER=1` select hosted Meta clients with `mission` / `draft` roles. `META_MISSION_MODEL` / `META_DRAFT_MODEL` otherwise inherit `META_MODEL`. The base quick start leaves these off; enable both explicitly for Meta-backed Goals. |
 | Optional hosted role | `meta_llm(role='reasoner')` defaults to `muse-wonder-1.0`; the hosted client accepts `muse-spark-1.3` and `muse-wonder-1.0`. This is supported code, not an assertion of demo use. |
 | Optional local engine | `meta_local_hybrid` accepts a numeric loopback `/v1` endpoint; its default local model name is `muse-glimmer:30b`. No local weights are bundled or validated here. |
 | Voice | `live_voice.MODEL` is `gemini-3.8-live`. It handles conversation, transcription/tool delegation and live vision, not the Muse device-planning role. |
@@ -58,3 +58,17 @@ Action authorization remains separate from HTTP access. Owning an authenticated 
 | `legacy/` | Isolated upstream/native compatibility material; outside the submission path |
 
 No per-app API is required for device operation. The optional public-browser exploration helper is off by default; the iPad visual path remains the submission's interaction mechanism.
+
+## Goals, discoveries and local memory
+
+`app_mission.py` lets Muse choose allowed public-research skills within eight skills/five minutes, checks a source and returns a local review draft. `app_tools.py` binds checked excerpts to the current completed result; old saved receipts cannot silently become a fresh source. `exploration_agent.py` separates proposed topics from observed findings and a separate visual evidence check. Only completed evidence is persisted into the Feed.
+
+The companion's Library exposes edit/forget/restore for explicitly saved Hermes MemoryStore preferences on the Mac. Recent conversation and durable task records are separate. Companion cloud requests may include selected memory; Meta Goal/exploration clients exclude personal Hermes preferences/discoveries. The public source includes storage implementation and synthetic fixtures, never an operator's stores.
+
+## Latest source integration and limits
+
+This release exports the pinned source `f3e3317c04a9dc0c4cc4e9beb04dd6ecc2e00cd2`, with the previous public export's sanitization and omitted private assets retained. The current voice path sends low-resolution in-memory frames, joins repeated pending Camera calls, and coordinates co-issued stop/new-action calls. A 1.5-second suppression heuristic can ignore a stop arriving with a new action; the eight-second post-stop resume window also needs live evaluation. Screen freshness and transport continuity are not established by offline checks alone.
+
+The hybrid actor waits on changed scenes, then permits non-typing actions after a bounded moving-screen streak so autoplaying feeds do not stall forever. Typing and Enter continue to wait for stillness. This trades prolonged waiting against stale-target risk; inspect outcomes. Search/open skills recover Home before launching to avoid stale sheets/modals.
+
+Camera scope blocks preview frames to Meta task models while active. Outside it, recognized Camera UI is allowed by default unless optional refusal is selected. Active Gemini voice vision can include the mirrored screen/preview. No universal privacy filtering is claimed. Native-app discovery records can lack a web URL; the current Feed renderer needs broader acceptance for that case.

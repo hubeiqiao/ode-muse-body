@@ -18,7 +18,7 @@ def fake_server(llm: LLM, wants: str) -> list[dict]:
             return httpx.Response(400, json={"error": {"message": f"Unsupported parameter. Use '{wants}' instead."}})
         return httpx.Response(200, json={"choices": [{"message": {"content": "DO: wait"}}]})
 
-    llm._http = httpx.AsyncClient(base_url="http://test/v1", transport=httpx.MockTransport(handle))
+    llm._http = httpx.AsyncClient(base_url="http://127.0.0.1/v1", transport=httpx.MockTransport(handle))
     return seen
 
 
@@ -65,7 +65,7 @@ def test_temperature_is_dropped_when_the_model_refuses_it():
             return httpx.Response(400, json={"error": {"message": "`temperature` is deprecated for this model."}})
         return httpx.Response(200, json={"choices": [{"message": {"content": "DO: wait"}}]})
 
-    llm._http = httpx.AsyncClient(base_url="http://test/v1", transport=httpx.MockTransport(handle))
+    llm._http = httpx.AsyncClient(base_url="http://127.0.0.1/v1", transport=httpx.MockTransport(handle))
     assert asyncio.run(llm.chat("sys", "hi")) == "DO: wait"
     assert asyncio.run(llm.chat("sys", "again")) == "DO: wait"
     assert ["temperature" in b for b in seen] == [True, False, False]
@@ -82,7 +82,7 @@ def test_rate_limit_is_waited_out(monkeypatch):
             return httpx.Response(429, headers={"retry-after": "0"})
         return httpx.Response(200, json={"choices": [{"message": {"content": "DO: wait"}}]})
 
-    llm._http = httpx.AsyncClient(base_url="http://test/v1", transport=httpx.MockTransport(handle))
+    llm._http = httpx.AsyncClient(base_url="http://127.0.0.1/v1", transport=httpx.MockTransport(handle))
     assert asyncio.run(llm.chat("sys", "hi")) == "DO: wait" and len(calls) == 3
 
 
@@ -98,7 +98,7 @@ def test_exhausted_quota_fails_fast(body):
         calls.append(1)
         return httpx.Response(429, text=body)
 
-    llm._http = httpx.AsyncClient(base_url="http://test/v1", transport=httpx.MockTransport(handle))
+    llm._http = httpx.AsyncClient(base_url="http://127.0.0.1/v1", transport=httpx.MockTransport(handle))
     with pytest.raises(httpx.HTTPStatusError):
         asyncio.run(llm.chat("sys", "hi"))
     assert len(calls) == 1
@@ -113,7 +113,7 @@ def test_rate_limit_gives_up_after_the_last_wait(monkeypatch):
         calls.append(1)
         return httpx.Response(429)
 
-    llm._http = httpx.AsyncClient(base_url="http://test/v1", transport=httpx.MockTransport(handle))
+    llm._http = httpx.AsyncClient(base_url="http://127.0.0.1/v1", transport=httpx.MockTransport(handle))
     with pytest.raises(httpx.HTTPStatusError):
         asyncio.run(llm.chat("sys", "hi"))
     assert len(calls) == 3
@@ -133,7 +133,7 @@ def test_temperature_retry_also_waits_out_a_rate_limit(monkeypatch):
             return httpx.Response(429, headers={"retry-after": "0"})
         return httpx.Response(200, json={"choices": [{"message": {"content": "DO: wait"}}]})
 
-    llm._http = httpx.AsyncClient(base_url="http://test/v1", transport=httpx.MockTransport(handle))
+    llm._http = httpx.AsyncClient(base_url="http://127.0.0.1/v1", transport=httpx.MockTransport(handle))
     assert asyncio.run(llm.chat("sys", "hi")) == "DO: wait"
     assert seen == [True, False, False]
 
@@ -146,7 +146,7 @@ def test_other_400_mentioning_temperature_is_not_swallowed():
         seen.append(json.loads(request.content))
         return httpx.Response(400, json={"error": {"message": "invalid image; temperature is fine"}})
 
-    llm._http = httpx.AsyncClient(base_url="http://test/v1", transport=httpx.MockTransport(handle))
+    llm._http = httpx.AsyncClient(base_url="http://127.0.0.1/v1", transport=httpx.MockTransport(handle))
     with pytest.raises(httpx.HTTPStatusError):
         asyncio.run(llm.chat("sys", "hi"))
     assert len(seen) == 1 and "temperature" in seen[0]

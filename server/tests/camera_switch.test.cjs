@@ -7,7 +7,7 @@ const assert=require('node:assert/strict'),harness=require('./continuous_voice_h
  assert.equal(h.videos(ws).length,1);
  await h.askCamera();await h.fire(2500);await h.fire(1500);
  assert.equal(ws.readyState,1);assert.equal(h.sockets.length,1);assert.equal(h.sessionRequests().length,1);
- assert.equal(h.videos(ws).length,2,'screen stream continues after opening Camera');
+ assert.equal(h.videos(ws).length,3,'screen stream continues after opening Camera (plus one fresh frame with the result)');
  assert(!h.requests.some(r=>r.url==='/api/voice/end'||r.url==='/api/voice/camera/frame'));
  const req=h.requests.find(r=>r.url==='/api/voice/tool');
  assert.equal(req.body.name,'open_camera');assert.match(req.body.utterance,/look at me/);assert.equal(req.body.owner_turn,1);

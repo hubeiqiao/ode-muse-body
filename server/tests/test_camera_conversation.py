@@ -187,7 +187,7 @@ def test_normal_session_setup_is_byte_identical_snapshot(monkeypatch, flag, read
     b, _, _ = bridge_for(cam if flag == '1' else None)
     result, got = _normal_snapshot(monkeypatch, b)
     assert got == (FIXTURES / 'voice_setup_normal_ipad.json').read_text().strip()
-    assert 'mediaResolution' not in got and 'contextWindowCompression' not in got
+    assert 'MEDIA_RESOLUTION_LOW' in got and 'contextWindowCompression' not in got
     assert 'start_camera_conversation' not in got
     assert 'camera' not in b.sessions[result['session']]
     assert not b.sessions[result['session']].get('camera_switch')

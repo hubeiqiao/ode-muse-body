@@ -4,7 +4,7 @@ Muse operates a real device. Use a dedicated, owner-controlled iPad and stay pre
 
 ## Owner words authorize actions
 
-Ode must never post, buy or log in without explicit owner words. Public posting in the guarded photo flow requires a fresh confirmation tied to the pending draft, caption, attachment, account and task. Read the draft back first. A generic instruction such as “explore” does not authorize publishing, purchases, messages, likes, follows or account switching.
+Ode must never post, buy or log in without explicit owner words. The guarded photo flow consumes fresh confirmation for its pending draft/task before sending. The operator must also inspect the actual account, exact caption and attachment; the automated prepare checks alone do not establish all three. Read the draft back first. A generic instruction such as “explore” does not authorize publishing, purchases, messages, likes, follows or account switching.
 
 Credential entry, payment and sensitive settings should remain human-operated in this prototype. Model prompts and per-flow checks are defense in depth, not a formal reference monitor for every possible general-agent action. Do not hand the visual agent an unattended purchasing or credential-entry task. An authenticated remote browser identifies an owner; it does not constitute task confirmation.
 
@@ -43,4 +43,12 @@ Do not expose the ESP32 TCP port or AirPlay receiver. They remain on a trusted L
 
 ## Public release boundary
 
-This repository contains no personal screenshots, device inventory, network credentials, task evidence, conversation history or private Git history. Synthetic test fixtures validate algorithms and boundaries; skipped private-capture cases do not prove real-app reliability. Before publishing a demo, inspect every frame and retain the upstream project credit.
+This repository excludes raw device screenshots, device inventory, network credentials, runtime/evidence folders, conversations and private Git history. The explicitly selected cover, four public-safe companion captures and short sanitized model/HID excerpt are documentation assets. No runtime memory store is shipped. Synthetic test fixtures validate algorithms and boundaries; skipped private-capture cases do not prove real-app reliability. Before publishing a demo, inspect every frame and retain the upstream project credit.
+
+## Camera and memory scope limits
+
+Normal explicitly started voice sessions can stream the current mirrored screen to Gemini, including recognized Camera UI. Explicit camera scope blocks preview frames from Meta task-model calls; outside that scope recognized Camera UI is allowed by default unless the optional refusal setting is enabled. This is not a general-purpose private-screen redactor. Keep notifications, private chats and credentials off screen.
+
+Hermes preferences, recent conversation and task records are separate local stores. Companion chat can include selected preferences in cloud requests. Meta mission/exploration clients omit personal Hermes preferences/discoveries. Source verification establishes correspondence to observed text, not independent truth of the source.
+
+The latest voice code includes a 1.5-second co-issued action/stop suppression heuristic and an eight-second post-stop resume window for a new action. These are model-tool coordination heuristics, not a physical-stop guarantee; use the explicit companion Stop control and board power fallback when needed.

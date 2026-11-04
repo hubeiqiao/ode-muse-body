@@ -11,7 +11,7 @@ const assert=require('node:assert/strict'),harness=require('./continuous_voice_h
   await h.emit({serverContent:{turnComplete:true}});await h.fire(1500);
  }
  assert.equal(h.sockets.length,1);assert.equal(ws.readyState,1);assert.equal(h.sessionRequests().length,1);
- assert.equal(h.videos(ws).length,3);
+ assert.equal(h.videos(ws).length,7);  // 3 periodic + 1 fresh frame before each of 4 tool results
  const rows=h.el('voice-transcript').children.map(r=>r.lastChild.textContent).join('|');
  assert.match(rows,/photo not confirmed/i);assert(!/switching|camera conversation/i.test(rows));
  // Spoken Stop keeps this conversation open and latches further actions.

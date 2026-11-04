@@ -170,6 +170,33 @@
     } catch { /* A missed frame must not interrupt audio or queue old frames. */ }
     finally { scheduleScreen(generation); }
   }
+  // Live sometimes never answers after the owner finishes speaking while video streams in.
+  // If nothing (speech, audio or a tool call) comes back within REPLY_NUDGE_MS, resend the
+  // owner's words as text with the newest screen so Ode answers.
+  const REPLY_NUDGE_MS = 5000;
+  let replyNudge = null, nudgeText = '';
+  function cancelReplyNudge() { if (replyNudge) clearTimeout(replyNudge); replyNudge = null; nudgeText = ''; }
+  function armReplyNudge(text, sid) {
+    nudgeText = (nudgeText + text).slice(-600);
+    if (replyNudge) clearTimeout(replyNudge);
+    const nudgeEpoch = epoch, socket = ws;
+    replyNudge = setTimeout(async () => {
+      replyNudge = null;
+      const said = nudgeText.trim(); nudgeText = '';
+      if (!said || nudgeEpoch !== epoch || !active || socket !== ws || ws?.readyState !== WebSocket.OPEN || stopLatched) return;
+      await sendFreshScreen(sid);
+      send({clientContent: {turns: [{role: 'user', parts: [{text: '(The owner just said: "' + said + '" and is waiting. ' +
+        'Look at the live iPad screen you are receiving now and answer in one or two short sentences, or call the right tool.)'}]}],
+        turnComplete: true}});
+    }, REPLY_NUDGE_MS);
+  }
+  async function sendFreshScreen(sid) {
+    try {
+      const response = await fetch('/api/voice/screen/frame', {method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({session: sid, fresh: true})});
+      if (response.status === 200 && ws?.readyState === WebSocket.OPEN) sendVideo(await response.arrayBuffer());
+    } catch { /* best effort; the periodic screen stream continues */ }
+  }
   function sendVideo(buffer) {
     send({realtimeInput: {video: {data: frameBase64(buffer), mimeType: 'image/jpeg'}}});
   }
@@ -267,6 +294,8 @@
     if (call.name === 'phone_status' && taskWatches.size && !taskRunning(receipt)) {
       receipt = {...receipt, instruction:'Stay silent; the browser will deliver [TASK FINISHED] with the result. Do not call tools.'};
     }
+    // Send the newest screen first, so the reply is about what is on screen NOW (e.g. the camera preview).
+    if (receipt.terminal !== false && !receipt.running) await sendFreshScreen(sid);
     send({toolResponse: {functionResponses: [{id: call.id, name: call.name, response: receipt}]}});
     state(stopLatched ? label('已停止 · 麦克风仍在聆听', 'Stopped · still listening') : receipt.status === 'not_ready' ? (receipt.reason || label('设备未就绪，请查看连接状态', 'Device not ready. Check connection status')) : label('聆听中', 'Listening'));
   }
@@ -290,7 +319,8 @@
     const c = data.serverContent;
     if (c) {
       if (c.interrupted) clearAudio();
-      if (c.inputTranscription?.text) { ownerTurn += c.inputTranscription.text; line('You', c.inputTranscription.text); handleInput(c.inputTranscription.text); }
+      if (c.inputTranscription?.text) { ownerTurn += c.inputTranscription.text; line('You', c.inputTranscription.text); handleInput(c.inputTranscription.text); armReplyNudge(c.inputTranscription.text, sid); }
+      if (c.outputTranscription?.text || c.modelTurn?.parts?.length) cancelReplyNudge();
       if (c.outputTranscription?.text) { if (demoReadback) demoReadback.text += c.outputTranscription.text; miloTurn += c.outputTranscription.text; newInput = true; line('Gemini', c.outputTranscription.text); }
       if (c.turnComplete) {
         newInput = true; void flushTurns();
@@ -300,6 +330,7 @@
       }
       if (c.turnComplete && demoReadback) { demoReadback.turnDone = true; maybeFinishDemoReadback(); }
     }
+    if (data.toolCall?.functionCalls?.length) cancelReplyNudge();
     for (const call of data.toolCall?.functionCalls || []) {
       // Never block receiving audio or a spoken stop while another tool is pending.
       void tool(call, generation, sid).catch(error => state(error.message));
@@ -324,6 +355,7 @@
     }
   }
   async function end(message) {
+    cancelReplyNudge();
     void flushTurns();
     stopScreen(); stopTaskWatch();
     ++epoch; active = false; document.body.dataset.voiceActive = "false";

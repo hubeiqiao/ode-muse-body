@@ -520,7 +520,7 @@ def test_normal_companion_text_never_denies_operating_the_ipad(monkeypatch, tmp_
 # Updated deliberately: Joe requested shared ownership text even with camera/memory disabled.
 # Updated deliberately again (Joe 2026-10-30): the owner-chosen AI name (default Ode) is rendered into it.
 # Updated for continuous normal-session iPad screen vision and the no-false-success rule (2026-11-02).
-FLAG_OFF_FIXTURE_SHA256 = 'df477ebe861c7a2edfb7c872ce02a7258c29f2b092e224f1d14de3e402802474'
+FLAG_OFF_FIXTURE_SHA256 = '998e8f5be96a06cd84c2a64647093828d1bf2a6476961066b9d7892694c45a94'
 
 
 def test_flag_off_normal_fixture_is_unchanged():
