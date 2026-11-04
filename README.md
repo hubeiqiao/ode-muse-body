@@ -1,7 +1,7 @@
 <div align="center">
   <img src="docs/assets/ode-avatar.png" width="112" height="112" alt="Ode, the orange companion mascot">
   <h1>Ode</h1>
-  <p><strong>Personal superintelligence needs a body. Start with the iPad you already own.</strong></p>
+  <p><strong>Personal superintelligence needs a body. So I gave Muse one.</strong></p>
   <p>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-6366f1" alt="License: MIT"></a>
     <a href="https://github.com/hubeiqiao/ode-muse-body/actions/workflows/ci.yml"><img src="https://github.com/hubeiqiao/ode-muse-body/actions/workflows/ci.yml/badge.svg" alt="Offline verification CI"></a>
