@@ -66,7 +66,7 @@ A board ACK establishes acceptance by the board. The changed screen in the film 
 
 Inspect the existing video/result and read the implementation/tests in [JUDGES.md](JUDGES.md). No device actions were run to prepare this release. Reproduction requires the owner's board pairing, API access, calibration and local masked templates. Start with read-only navigation. Do not replay the historical X send or infer new authorization from the recorded confirmation.
 
-The photo flow's terminal label can mean the composer closed. It alone does not independently verify server-side publication, actual account or exact caption equality. The film and supplied existing post are the result evidence. No engagement totals, measured productivity benefit or broad app benchmark is claimed. The release check could not independently fetch X through its web fetcher; the link is the owner's supplied published result.
+The photo flow's terminal label can mean the composer closed. It alone does not independently verify server-side publication, actual account or exact caption equality. The film and supplied existing post are the result evidence. No engagement totals, measured productivity benefit or broad app benchmark is claimed. The November 4 audit independently retrieved public X post metadata confirming `@hubeiqiao`, the caption “Joe controls his AI assistant Ode to finish all those tasks.”, an attached photo and a November 3, 2026, 11:25:54 ET creation time. This verifies the existing public result, not a new send or engagement claim.
 
 ## Companion and capability boundaries
 
@@ -80,7 +80,7 @@ The mobile browser controls the Mac-hosted companion. These selected captures sh
 - **Camera → photo → X:** calibrated preparation and a guarded send with fresh confirmation. The operator checks the actual account, exact caption and photo. See the [judge guide’s photo readback-gate limitation](JUDGES.md#evidence-boundaries-worth-checking).
 - **Public app research:** visible source reading and checked excerpts. A source check establishes what was observed, not whether every source claim is true. The filmed rednote ingredients came from the search-result AI summary rather than the opened post body.
 - **Exploration → Feed:** Muse chooses a topic, visits a public source and saves a discovery only after a separate evidence check. The shown Baobab card comes from the November 3 Wikipedia visit.
-- **Goals:** Muse selects allowed public-research skills, checks a source and produces a local review draft. Each explicit session is bounded to eight skills / five minutes, with no automatic restart.
+- **Goals:** Muse selects allowed public-research skills, checks a source and produces a local review draft. The companion starts explicit sessions with an eight-skill / five-minute budget and no automatic restart. The API permits separately chosen budgets up to 16 skills / 30 minutes; these are configurable limits, not measured completion times.
 - **Library and memory:** edit, forget or restore explicitly saved preferences. Selected Hermes MemoryStore components keep them on the Mac; conversation and task records are separate. Companion requests can include selected memory text. Meta Goal/exploration requests exclude personal Hermes memory. Local storage is separate from cloud inference.
 - **24 app skill cards + a general visual agent:** known layouts have reusable capabilities, with visual fallback for unfamiliar screens. A registered card is not full app acceptance; broader fallback reliability remains to be evaluated.
 

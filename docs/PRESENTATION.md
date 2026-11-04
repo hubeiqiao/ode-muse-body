@@ -24,9 +24,9 @@ The Open Interpreter reference URL now redirects from `OpenInterpreter/open-inte
 
 ## Media and owner handoff
 
-See [media recipes, sizes and upload instructions](assets/media/README.md). The README keeps a `GITHUB_VIDEO_EMBED` marker directly below the hero so the owner can insert the MP4 through GitHub’s attachment UI. The full film remains on [YouTube](https://youtu.be/0wcoqi5CVuQ).
+See [media recipes, sizes and upload instructions](assets/media/README.md). The README now embeds the uploaded **53.67 s** MP4 through GitHub’s native attachment player below the hero. The November 4 audit downloaded the video URL from the rendered public page and confirmed that its bytes match `ode-github-embed.mp4`. The earlier insertion marker has been replaced. The full film remains on [YouTube](https://youtu.be/0wcoqi5CVuQ).
 
-The existing 2:1 cover can be uploaded in **Settings → General → Social preview**. GitHub generates its own card crop; inspect the preview before saving. This repository update does not change repository visibility, submit the hackathon entry or publish a social post.
+The public repository HTML now advertises a custom social-preview image. Its contents and GitHub crop should still be inspected when sharing the repository. This repository update does not change repository visibility, submit the hackathon entry or publish a social post.
 
 ## Verification of this refresh
 

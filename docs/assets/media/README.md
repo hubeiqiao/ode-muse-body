@@ -20,23 +20,20 @@ The hero’s Muse leap is composited; the ESP32 animation follows logged command
 
 ## Native GitHub video attachment
 
-Export: **`ode-github-embed.mp4`**, kept outside Git at the owner’s requested production location:
-
-```text
-/Users/joehu/Joe/videos/meta-hackathon-20261102/social/ode-github-embed.mp4
-```
+Export: **`ode-github-embed.mp4`**, kept outside Git at the production-relative path `social/ode-github-embed.mp4`. No owner-specific filesystem path is required to inspect the public attachment.
 
 - **53.67 s**, **1280×720**, 30 fps, **8,761,903 bytes (8.76 MB)**.
 - H.264 video (two-pass, 1,200 kbit/s target), AAC audio (96 kbit/s); `moov` precedes `mdat` for faststart.
 - Continuous excerpt of the approved film, **00:23.733–01:17.400**: ESP32 hands → Camera → photo → X draft → fresh confirmation → recorded send/result. Original mixed audio retained. The film’s existing time compression remains; no extra speed change is applied to the MP4.
 - Full source: `ode-give-muse-a-body-3min-v6.mp4`, 178.633333 s, 1920×1080, 30 fps; SHA-256 `ecaeef2f1267d84e7ca51e18af541fd4552cb56995b91443d1eaf78ee4551317`.
 
-### Owner’s GitHub UI steps
+### Published attachment and verification
 
-1. Edit the repository README in GitHub’s web editor.
-2. Find `<!-- GITHUB_VIDEO_EMBED -->` directly below the hero animation.
-3. Drag in **ode-github-embed.mp4** or use the attachment control; wait for GitHub to supply its hosted video URL. Place the returned attachment at the marker, outside HTML blocks. Preview playback, then commit the README edit. The current release retains the marker and does not invent an attachment URL.
-4. In **Settings → General → Social preview**, upload [ode-cover-readme-2x1.png](../ode-cover-readme-2x1.png), inspect GitHub’s crop and save.
+The README embeds the uploaded clip using GitHub's native video player. The original attachment reference is `https://github.com/user-attachments/assets/883dbbaa-a3f9-4b56-9db3-3a5ea700166f`; GitHub's rendered page resolves it to a temporary signed video URL. Directly requesting the original reference can return 404 even while the rendered player works. Do not replace the README reference with an expiring signed URL.
+
+On November 4 the public page's resolved video downloaded successfully as `video/mp4`: **8,761,903 bytes**, **53.666667 s**, SHA-256 `2d8e5427c93eb707be56d8d182c9c302b16f6652ec92a93a542fe9a07e3e9737`, identical to the local attachment export. The former `GITHUB_VIDEO_EMBED` insertion marker is no longer needed.
+
+The public repository HTML advertises a custom social-preview image. Inspect its actual crop before sharing; do not infer it from the README's cover dimensions alone.
 
 ## Credits and reuse
 

@@ -2,12 +2,14 @@
 
 **Give Muse a body on the iPad you already own.** [Full demo](https://youtu.be/0wcoqi5CVuQ) · [README](../README.md) · [Editing disclosure](DEMO.md)
 
+**Indie Developer Track · Push the Frontier:** connect Muse screen reasoning to physical iPad input.
+
 ## A two-minute review path
 
-- **First 50 seconds of your review:** watch film **00:29–01:17**. Follow room description → Psyduck → photo → draft → fresh confirmation → one physical send and result. [Existing X result](https://x.com/hubeiqiao/status/2117654510482960846).
-- **Next 20 seconds:** watch **01:30–01:46** and compare the [sanitized model/HID excerpt](DEMO.md#sanitized-real-run-excerpt). Muse Spark locates a search target; board input changes the screen. This is one selected real step, not proof of model planning at every tap.
-- **Next 20 seconds:** watch **02:07–02:24** and inspect the [phone UI captures](DEMO.md#companion-and-capability-boundaries). Goals return local review drafts; Feed retains a checked quote/source; Library is owner-controlled. These captures include saved state.
-- **Final 30 seconds:** inspect the rubric/source map below. [Testing](TESTING.md) separates static definitions, current execution and excluded private-frame cases. Optional: **02:24 onward**, live Ottawa demonstration; Amazon at **02:33.47**.
+- **First 25 seconds of your review:** watch [film 01:30–01:46](https://youtu.be/0wcoqi5CVuQ?t=90) and compare the [sanitized model/HID excerpt](DEMO.md#sanitized-real-run-excerpt). Muse Spark locates rednote's search target; ESP32 input changes the real screen. This is one selected step, not proof of model planning at every tap.
+- **Next 50 seconds:** watch [00:29–01:17](https://youtu.be/0wcoqi5CVuQ?t=29). Follow room description → Psyduck → photo → draft → fresh confirmation → one physical send and result. Gemini Live supplies conversation; a measured-tap skill supplies this input sequence. [Existing X result](https://x.com/hubeiqiao/status/2117654510482960846).
+- **Next 20 seconds:** watch [02:07–02:24](https://youtu.be/0wcoqi5CVuQ?t=127) and inspect the [companion UI captures](DEMO.md#companion-and-capability-boundaries). Goals return local review drafts; Feed retains a checked quote/source; Library is owner-controlled. These captures include saved state.
+- **Final 25 seconds:** inspect the rubric/source map below. [Testing](TESTING.md) separates static definitions, current execution and excluded private-frame cases. Optional: [02:24 onward](https://youtu.be/0wcoqi5CVuQ?t=144), live Ottawa demonstration; Amazon at **02:33.47**.
 
 The opening is Muse's composite leap → “Muse had no body” → Meet Ode's redrawn session chat → ESP32 explanation timed to real HID logs. The [complete chapter list](DEMO.md#chapters-for-the-final-v6-cut) includes the 01:50 architecture beat.
 
@@ -38,7 +40,7 @@ A shareable hook is already available: Muse entering a spare iPad, followed by t
 
 ## Evidence boundaries worth checking
 
-- **Board ACK:** command acceptance, not proof of app success. **Closed composer:** not independent proof of publication. The film's result card and existing post are the publication evidence; web retrieval of X was unavailable during review.
+- **Board ACK:** command acceptance, not proof of app success. **Closed composer:** not independent proof of publication. The film's result card and existing post are the publication evidence; the November 4 audit independently retrieved public X post metadata confirming `@hubeiqiao`, the caption and an attached photo.
 - **Photo confirmation:** the guarded flow consumes a fresh draft authorization before its send. Preparation checks an attachment and nonempty caption; the operator still checks the actual account, exact caption and photo. Photo drafts skip the text-only readback-complete gate; spoken readback in this film is not a universal enforced check. [Flow](../server/hidagent/x_photo_flow.py) · [voice branch](../server/hidagent/ipad_demo_flows.py) · [limits](SAFETY.md).
 - **Offline evidence:** synthetic regressions and protocol doubles exercise failure handling; excluded private images and macOS-only cases can skip. CI does not pair BLE, inspect apps or measure consecutive-run reliability. [Execution record and failure map](TESTING.md).
 

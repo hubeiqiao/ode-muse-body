@@ -33,7 +33,7 @@ Local icon/picker matching and Camera controls depend on layout-bound masked tem
 | --- | --- |
 | `AGENT_ENGINE=meta_hybrid`, `META_MODEL=muse-spark-1.3` | `meta_llm()` supplies `HybridAgent`'s model client and the backup `VisionJudge`; Meta endpoint is fixed to `https://api.meta.ai/v1`. The companion uses `agent.actor`. |
 | Primary proposal judge | `Jev.from_env()`: `JEV_MODEL` defaults to `jev-latest`, credentials from `TYPESAFE_API_KEY` or explicitly supplied `JEV_KEY_FILE`. |
-| Optional mission/draft writer | `META_MISSION_WRITER=1` / `META_DRAFT_WRITER=1` select hosted Meta clients with `mission` / `draft` roles. `META_MISSION_MODEL` / `META_DRAFT_MODEL` otherwise inherit `META_MODEL`. The base quick start leaves these off; enable both explicitly for Meta-backed Goals. |
+| Optional mission/draft writer | `META_MISSION_WRITER=1` / `META_DRAFT_WRITER=1` select hosted Meta clients with `mission` / `draft` roles. `META_MISSION_MODEL` / `META_DRAFT_MODEL` otherwise inherit `META_MODEL`. Without these flags, both writers inherit `agent.actor`, which is already Meta under `meta_hybrid`; the flags select dedicated hosted Meta role clients. |
 | Optional hosted role | `meta_llm(role='reasoner')` defaults to `muse-wonder-1.0`; the hosted client accepts `muse-spark-1.3` and `muse-wonder-1.0`. This is supported code, not an assertion of demo use. |
 | Optional local engine | `meta_local_hybrid` accepts a numeric loopback `/v1` endpoint; its default local model name is `muse-glimmer:30b`. No local weights are bundled or validated here. |
 | Voice | `live_voice.MODEL` is `gemini-3.8-live`. It handles conversation, transcription/tool delegation and live vision, not the Muse device-planning role. |
@@ -64,7 +64,7 @@ No per-app API is required for device operation. The optional public-browser exp
 
 ## Goals, discoveries and local memory
 
-`app_mission.py` lets Muse choose allowed public-research skills within eight skills/five minutes, checks a source and returns a local review draft. `app_tools.py` binds checked excerpts to the current completed result; old saved receipts cannot silently become a fresh source. `exploration_agent.py` separates proposed topics from observed findings and a separate visual evidence check. Only completed evidence is persisted into the Feed.
+`app_mission.py` lets Muse choose allowed public-research skills, checks a source and returns a local review draft. The companion requests eight skills/five minutes; the API accepts explicitly configured budgets up to 16 skills/30 minutes. `app_tools.py` binds checked excerpts to the current completed result; old saved receipts cannot silently become a fresh source. `exploration_agent.py` separates proposed topics from observed findings and a separate visual evidence check. Only completed evidence is persisted into the Feed.
 
 The companion's Library exposes edit/forget/restore for explicitly saved Hermes MemoryStore preferences on the Mac. Recent conversation and durable task records are separate. Companion cloud requests may include selected memory; Meta Goal/exploration clients exclude personal Hermes preferences/discoveries. The public source includes storage implementation and synthetic fixtures, never an operator's stores.
 

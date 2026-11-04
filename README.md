@@ -17,6 +17,10 @@
   </p>
 </div>
 
+Ode sees the screen, talks with you, and taps and types in real iPad apps. **Muse Spark plans app work; an ESP32 supplies Bluetooth hands; a Mac coordinates the loop.** Gemini Live handles voice and camera conversation. Muse runs in the cloud.
+
+Built by **Joe Hu** ([@hubeiqiao](https://x.com/hubeiqiao)) for the **Meta Global AI Developer Hackathon**. Based on [ESP32 iPhone Agent](https://github.com/onehumanbeing/esp32-iphone-agent) by Henry Yuan. **Indie Developer Track · Push the Frontier.**
+
 ## Demo
 
 <p align="center">
@@ -31,9 +35,6 @@ https://github.com/user-attachments/assets/883dbbaa-a3f9-4b56-9db3-3a5ea700166f
 
 <p align="center"><a href="https://youtu.be/0wcoqi5CVuQ"><strong>Watch the full 2:58 film ↗</strong></a> · <a href="docs/DEMO.md">Chapters &amp; editing disclosure</a> · <a href="docs/JUDGES.md">Two-minute judge guide</a></p>
 
-Ode sees the screen, talks with you, and taps and types in real iPad apps. **Muse Spark plans app work; an ESP32 supplies Bluetooth hands; a Mac coordinates the loop.** Gemini Live handles voice and camera conversation. Muse runs in the cloud.
-
-Built by **Joe Hu** ([@hubeiqiao](https://x.com/hubeiqiao)) for the **Meta Global AI Developer Hackathon**. Based on [ESP32 iPhone Agent](https://github.com/onehumanbeing/esp32-iphone-agent) by Henry Yuan.
 
 ## Why
 
@@ -149,7 +150,7 @@ export UXPLAY_DISPLAY_SIZE=2266x1488 MIRROR_FRAME_HEIGHT=1080
 
 Mirror to **Ode iPad** in landscape full-screen mode. Open the [companion](http://127.0.0.1:8890/companion) and [calibration UI](http://127.0.0.1:8890/). Confirm live frames, stable board connection and calibration before an attended “Open Settings.” Follow the [acceptance ladder](docs/SETUP.md#first-run-acceptance-ladder).
 
-Goals need `APP_MISSIONS=1`; Meta Goal/draft roles use `META_MISSION_WRITER=1` and `META_DRAFT_WRITER=1`. Exploration needs `EXPLORATION_PUBLIC_BROWSER=1`. Enable attended sessions only after setup. Camera/photo fast paths need your own masked templates and local OCR; personal captures and calibration are excluded from this checkout. Saved-state companion views start empty on a fresh clone.
+Goals need `APP_MISSIONS=1`. Set `META_MISSION_WRITER=1` and `META_DRAFT_WRITER=1` to select dedicated hosted Meta role clients; otherwise Goals inherit the configured actor (Meta in this `meta_hybrid` setup). Exploration needs `EXPLORATION_PUBLIC_BROWSER=1`. Enable attended sessions only after setup. Camera/photo fast paths need your own masked templates and local OCR; personal captures and calibration are excluded from this checkout. Saved-state companion views start empty on a fresh clone.
 
 </details>
 
