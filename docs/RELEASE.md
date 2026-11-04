@@ -35,4 +35,4 @@ The separate privacy checks cover credential formats, owner/device identifiers, 
 
 ## Before changing visibility
 
-Replace `[YOUTUBE_URL]` in README, DEMO and JUDGES with the accepted upload. Review the rendered GitHub page, safe captures, character rights/credits and final demo description. Preserve Henry Yuan and Hermes attribution, including in demo/video/post descriptions. The owner changes visibility and submits the hackathon entry separately; pushing this snapshot performs neither action.
+The demo video is linked in README, DEMO and JUDGES: https://youtu.be/0wcoqi5CVuQ. Review the rendered GitHub page, safe captures, character rights/credits and final demo description. Preserve Henry Yuan and Hermes attribution, including in demo/video/post descriptions. The owner changes visibility and submits the hackathon entry separately; pushing this snapshot performs neither action.

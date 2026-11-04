@@ -1,6 +1,6 @@
 # Demo: intent, physical action, visible result
 
-[Watch the 2:58 v6 film]([YOUTUBE_URL]) · [Existing home-demo X post](https://x.com/hubeiqiao/status/2117654510482960846) · [Judge guide](JUDGES.md)
+[Watch the 2:58 v6 film](https://youtu.be/0wcoqi5CVuQ) · [Existing home-demo X post](https://x.com/hubeiqiao/status/2117654510482960846) · [Judge guide](JUDGES.md)
 
 The home footage was recorded November 3, 2026. Stage footage is from Shopify Builder Sundays, Ottawa, November 1. These positions follow **VIDEO-METADATA-v6.md, updated November 4 for the 00:24 render**: 5,359 frames at 30 fps, **2:58.63**. They are film positions, not task latency measurements.
 

@@ -1,6 +1,6 @@
 # Two minutes to judge Ode
 
-**Give Muse a body on the iPad you already own.** [Full demo]([YOUTUBE_URL]) · [README](../README.md) · [Editing disclosure](DEMO.md)
+**Give Muse a body on the iPad you already own.** [Full demo](https://youtu.be/0wcoqi5CVuQ) · [README](../README.md) · [Editing disclosure](DEMO.md)
 
 ## A two-minute review path
 

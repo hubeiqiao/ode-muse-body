@@ -2,9 +2,9 @@
 
 **Give Muse a body on the iPad you already own.**
 
-**[Watch the 2:58 demo]([YOUTUBE_URL])** · [Two-minute judge guide](docs/JUDGES.md) · [Existing X result](https://x.com/hubeiqiao/status/2117654510482960846)
+**[Watch the 2:58 demo](https://youtu.be/0wcoqi5CVuQ)** · [Two-minute judge guide](docs/JUDGES.md) · [Existing X result](https://x.com/hubeiqiao/status/2117654510482960846)
 
-[![Ode: My iPad is alive?](docs/assets/ode-cover-readme-2x1.png)]([YOUTUBE_URL])
+[![Ode: My iPad is alive?](docs/assets/ode-cover-readme-2x1.png)](https://youtu.be/0wcoqi5CVuQ)
 <sub>Muse character: Meta · not affiliated with or endorsed by Meta. Thumbnail artwork: generated background, official Muse cutout, Joe's real face from the demo footage.</sub>
 
 Ode lets an assistant **see, talk, tap and type** in real iPad apps without a per-app API integration. **Muse Spark makes screen-based app decisions; an ESP32 supplies Bluetooth keyboard and mouse input; a Mac coordinates the loop.** Gemini Live handles voice and camera conversation. Muse runs in the cloud. **No Xcode IDE required. No jailbreak.** About $5 covers the board only.
@@ -21,7 +21,7 @@ Based on [ESP32 iPhone Agent](https://github.com/onehumanbeing/esp32-iphone-agen
 
 ## Watch it work
 
-**[Watch the 2:58 demo on YouTube]([YOUTUBE_URL])** · **[The real X post from the demo](https://x.com/hubeiqiao/status/2117654510482960846)**
+**[Watch the 2:58 demo on YouTube](https://youtu.be/0wcoqi5CVuQ)** · **[The real X post from the demo](https://x.com/hubeiqiao/status/2117654510482960846)**
 
 | In the film | What to look for |
 | --- | --- |
