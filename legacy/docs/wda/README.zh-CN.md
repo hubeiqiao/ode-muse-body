@@ -4,4 +4,4 @@
 
 构建必须设置自己的 `APPLE_DEVELOPMENT_TEAM`，可选 `APPLE_CODE_SIGN_IDENTITY`（默认 `Apple Development`）。运行必须明确设置 `WDA_DEVICE_UDID`；型号、配对、连接和开发者模式检查均需通过。当前只支持 `iPad14,1`。可通过 `WDA_DENIED_UDIDS` 设置本地逗号分隔的拒绝清单，不内置任何所有者设备标识。
 
-`legacy/tools/wda/build.sh` 和 `run.sh` 使用 `WDA_PYTHON`，未设置时从 PATH 找 `python3`。不要提交外部构建、设备清单、绑定、密钥或日志。完整配置见 [SETUP.md](../SETUP.md)。
+`legacy/tools/wda/build.sh` 和 `run.sh` 使用 `WDA_PYTHON`，未设置时从 PATH 找 `python3`。不要提交外部构建、设备清单、绑定、密钥或日志。原生实验的完整设置未随此快照提供；本次投稿的范围见 [归档说明](../../README.md)。

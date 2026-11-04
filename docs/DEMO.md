@@ -2,21 +2,38 @@
 
 [Watch the 2:58 v6 film]([YOUTUBE_URL]) · [Existing home-demo X post](https://x.com/hubeiqiao/status/2117654510482960846) · [Judge guide](JUDGES.md)
 
-The home footage was recorded November 3, 2026. Stage footage is from Shopify Builder Sundays, Ottawa, November 1. The timestamps below follow the final v6 video metadata (5,342 frames at 30 fps, 2:58.07). They are film positions, not task latency measurements.
+The home footage was recorded November 3, 2026. Stage footage is from Shopify Builder Sundays, Ottawa, November 1. These positions follow **VIDEO-METADATA-v6.md, updated November 4 for the 00:24 render**: 5,359 frames at 30 fps, **2:58.63**. They are film positions, not task latency measurements.
+
+## Chapters for the final v6 cut
+
+Keep these seven chapter starts aligned with the accepted video description. The ESP32 explainer shares the Meet Ode chapter; the end card shares the stage chapter. Meet Ode's exact start is 00:09.70; its chapter rounds to 00:10 so the opening chapter is at least ten seconds.
+
+```text
+00:00 Muse leaps into my spare iPad · “Muse had no body.”
+00:10 Meet Ode (the Mac app, the real conversation) · a $5 ESP32 gives Muse hands
+00:29 One continuous take: it describes what it sees, takes a photo and posts it on X
+01:17 Even apps with no API: rednote, one real Muse Spark step
+01:50 How it works
+02:07 Skills, Goals, Feed and Library
+02:24 Live on stage at Shopify Builder Sundays, Ottawa (incl. an Amazon AirPods search)
+```
+
+## Exact scene and evidence positions
 
 | Film time | Scene / evidence |
 | --- | --- |
-| 00:00 | Muse leaps into an idle iPad. This character/desk composite is the hook, not device execution. The real board taps Camera at 00:02.7. |
-| 00:10.57 | Meet Ode: real self-introduction with enlarged Mac chat redrawn from the session's words in their original order. |
-| 00:24.60 | ESP32 explanation; board-command animation is aligned to recorded HID commands. |
-| 00:30.17 | Camera → scene conversation → photo → X compose → fresh “post it” confirmation → one send. The source interaction is one continuous take from self-introduction through the post; the delivered film compresses time. |
-| 01:10.57 | Linked result card for the actual X post. The automated check returned uncertainty; no resend was made. |
-| 01:12.27 | rednote search and reading. The ingredients reported aloud came from its search-result AI summary, not the opened post body. |
-| 01:22.23 | Real Muse Spark search-entry decision. Bounding box/confidence and subsequent input are excerpted below. |
-| 01:46.57 | Architecture: voice, Meta device reasoning, board input and mirrored-screen feedback. |
-| 02:03.70 | 24 skill cards, bounded Goals, Feed and Library. These include companion captures of saved local state; a UI overview is not a fresh Goal execution. The Baobab Feed card is from the same November 3 run at 11:32. |
-| 02:20.83 | Live stage excerpt; Amazon AirPods search appears at 02:30.37. Gemini Live supplies the room description. |
-| 02:50.00 | End card and credits. |
+| 00:00.00 | Muse leaps into an idle iPad. This character/desk composite is the hook, not device execution; there is no Camera-open shot here. |
+| 00:02.87 | “Muse had no body.” → “Now it lives on my spare iPad.” → Ode title and hackathon credit. |
+| 00:09.70 | Meet Ode: self-introduction with enlarged Mac chat redrawn from the session's words in their original order. |
+| 00:23.73 | ESP32 “gives Muse hands” explanation; board-command animation is timed to real HID logs. The real board taps Camera around 00:27.6 and Camera opens. |
+| 00:29.30 | One continuous source take: describe the room → Psyduck → photo → X compose → fresh “post it” confirmation → one send. The source session runs from self-introduction through the post; the delivered film compresses time. Room-description request is at 00:30.63; Psyduck enters around 00:38.57. Gemini Live supplies room/Psyduck conversation; the Camera/X sequence uses a measured-tap skill. |
+| 01:15.70 | Linked result card for the actual [X post](https://x.com/hubeiqiao/status/2117654510482960846). The automated check returned uncertainty; no resend was made. |
+| 01:17.40 | rednote search and reading. The ingredients reported aloud came from its search-result AI summary, not the opened post body. |
+| 01:30.17 | Real Muse Spark search-entry decision (narration begins 01:28.97). Bounding box/confidence and subsequent input are excerpted below. |
+| 01:50.00 | Architecture: voice, Meta device reasoning, board input and mirrored-screen feedback. |
+| 02:07.13 | 24 skill cards, bounded Goals, Feed and Library. These include companion captures of saved local state; a UI overview is not a fresh Goal execution. The Baobab Feed card is from the same November 3 run at 11:32. |
+| 02:24.27 | Live stage excerpt; Amazon AirPods search appears at 02:33.47. Gemini Live supplies the room conversation. |
+| 02:51.70 | End card and credits. |
 
 ## What is edited for time and readability
 

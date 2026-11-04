@@ -26,6 +26,31 @@ Two inherited warnings may appear: Starlette's httpx/TestClient deprecation and 
 
 The recorded v6 film and its editing boundaries are described in [DEMO.md](DEMO.md). A new setup still requires device acceptance, current model access and live tunnel verification if enabled. No live device/model task was run during this export.
 
+## November 4 judge-panel verification
+
+Re-executed against release base `b0a5a95` with this documentation-only update, using Python **3.12.8** on macOS and Node **22.23.4**. The final commit is identified by this document's Git history; its pushed [Offline verification workflow](../.github/workflows/ci.yml) supplies the separate CI result.
+
+| Check | Current local result |
+| --- | --- |
+| Python suite | **3,620 successful cases, 352 skipped, 0 failures**, 2 warnings; 138.26 s |
+| Node suite | **83 successful cases, 0 failures/skips**, 14 files |
+| Companion source build | Completed with Node 22; dependency directive/chunk-size warnings remain |
+| Physical/device acceptance | No new device task, model API call, publication, pairing or board write performed |
+
+These are executed cases, separate from the static definition inventory. The skip/fixture/platform limits below still apply. Local macOS checks and Ubuntu CI are different environments; neither establishes current real-app completion rates.
+
+### Failure handling → inspectable regressions
+
+| Failure or boundary | Regression evidence |
+| --- | --- |
+| Lost ACK after possible write | [`test_device_handshake.py`](../server/tests/test_device_handshake.py): `test_lost_ack_after_payload_is_ambiguous_and_never_retried` |
+| Restart with saved request | [`test_receipt_journal.py`](../server/tests/test_receipt_journal.py): `test_same_saved_request_after_restart_returns_history_without_calling_models_or_hid` |
+| Late model completion after Stop | [`test_app_mission.py`](../server/tests/test_app_mission.py): `test_stop_revokes_swallowed_model_cancellation_and_holds_ownership` |
+| Native landscape geometry/rounding | [`test_native_mirror.py`](../server/tests/test_native_mirror.py): `test_mini_native_rounding_keeps_exact_template_sizes_without_forcing_aspect` |
+| Lost photo-send ACK | [`test_x_photo_landscape.py`](../server/tests/test_x_photo_landscape.py): `test_lost_post_ack_consumes_draft_before_send` |
+
+These tests exercise offline contracts with synthetic state/doubles. They do not establish BLE, app-layout or source-truth acceptance.
+
 ## Verification of the November 3 release export
 
 Executed in this exported repository with Python 3.12.9 and Node 22.23.4, using isolated test data. No live device/model task or board write was performed.

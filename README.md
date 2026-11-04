@@ -2,10 +2,16 @@
 
 **Give Muse a body on the iPad you already own.**
 
-![Ode: I gave Muse my spare iPad](docs/assets/cover-v6-readme-2x1.png)
+**[Watch the 2:58 demo]([YOUTUBE_URL])** · [Two-minute judge guide](docs/JUDGES.md) · [Existing X result](https://x.com/hubeiqiao/status/2117654510482960846)
+
+[![Ode: I gave Muse my spare iPad](docs/assets/cover-v6-readme-2x1.png)]([YOUTUBE_URL])
 <sub>Muse character: Meta · not affiliated with or endorsed by Meta. The leap is a composite over a real desk shot.</sub>
 
-Muse lives on your idle iPad. It **sees, talks, taps and types**, using real apps without integrating their APIs. Muse Spark reasons over the mirrored screen; a tiny ESP32 supplies Bluetooth keyboard and mouse hands. A Mac coordinates the loop. Reuse your tablet instead of buying a dedicated AI device. **No Xcode IDE required. No jailbreak.** About $5 covers the board only.
+Ode lets an assistant **see, talk, tap and type** in real iPad apps without a per-app API integration. **Muse Spark makes screen-based app decisions; an ESP32 supplies Bluetooth keyboard and mouse input; a Mac coordinates the loop.** Gemini Live handles voice and camera conversation. Muse runs in the cloud. **No Xcode IDE required. No jailbreak.** About $5 covers the board only.
+
+The intended first user is a builder or creator who already owns a Mac and a spare iPad: research in installed apps and bring back checked findings or a draft for owner review. The film demonstrates a photo-to-X skill and rednote research; repeat-run reliability and time saved remain to be measured.
+
+**See the Meta-to-hardware proof at 01:30:** Muse Spark locates rednote’s search entry, then the ESP32 moves and taps. [Decision, HID acknowledgements and limits](docs/DEMO.md#sanitized-real-run-excerpt).
 
 Built by **Joe Hu** for the [Meta Global AI Developer Hackathon](https://cerebralvalley.ai/e/meta-ai-developer-hackathon), Indie track · Push the Frontier.
 
@@ -19,10 +25,13 @@ Based on [ESP32 iPhone Agent](https://github.com/onehumanbeing/esp32-iphone-agen
 
 | In the film | What to look for |
 | --- | --- |
-| **00:30 — Camera → photo → X** | A real conversation, a photo, caption preparation, fresh owner confirmation, then one send. The X photo skill uses owner-measured taps. |
-| **01:12 — rednote, without an app API** | Search and reading in the installed app. At **01:22**, a real Muse Spark screen decision leads to physical input. The spoken ingredients come from rednote's search-result AI summary, not the opened post body. |
-| **02:03 — Beyond commands** | Skills, bounded Goals, the discovery Feed and owner-controlled Library. These UI captures include saved state. |
-| **02:20 — Live in Ottawa** | Shopify Builder Sundays, November 1: conversation with the room and an Amazon AirPods search. |
+| **00:00 — Muse gets a body** | Muse leaps into the iPad (composite), then “Muse had no body.” |
+| **00:10 — Meet Ode + Bluetooth hands** | Mac chat redrawn from the session recording; from 00:23.73, the ESP32 animation follows real HID commands. Camera opens around 00:27.6. |
+| **00:29 — One continuous take: room → Psyduck → photo → X** | Gemini Live supplies scene conversation; the X photo skill uses owner-measured taps. Fresh “post it” confirmation precedes one send; the existing result appears at 01:15.70. |
+| **01:17 — rednote, without an app API** | At **01:30.17**, a real Muse Spark screen decision leads to physical input. Spoken ingredients come from rednote's search-result AI summary, not the opened post body. |
+| **01:50 — How it works** | Cloud model roles, Mac coordination, calibrated relative input and AirPlay feedback. |
+| **02:07 — Skills, Goals, Feed and Library** | 24 app skill cards, bounded research and owner-controlled memory. These UI captures include saved state. |
+| **02:24 — Live in Ottawa** | Shopify Builder Sundays, November 1: conversation with the room and an Amazon AirPods search (02:33.47). |
 
 The home session was recorded November 3. The film compresses waits and marks speed changes; its hook is composited and its enlarged Mac chat is redrawn from the same session. [Exact chapters and editing disclosure](docs/DEMO.md). The post check returned uncertainty and Ode did not resend. The linked published result supplies evidence beyond a closed composer.
 
@@ -91,6 +100,10 @@ A mobile browser controls the Mac-hosted companion. These are actual companion c
 The orange Ode mascot is the project's own identity. Muse character: Meta · not affiliated with or endorsed by Meta.
 
 ## Hardware and quick start
+
+**Review offline first:** [run the Python/Node suites](docs/TESTING.md), inspect the model/HID excerpt and read the source map. This needs no iPad, board or provider credentials.
+
+**First physical checkpoint:** an attended “Open Settings,” after pairing, mirror and calibration checks. Follow the [acceptance ladder](docs/SETUP.md#first-run-acceptance-ladder); the filmed Camera/X skill additionally requires your own templates and OCR.
 
 You need an **owner-controlled iPad, a Mac, an ESP32-C3 development board (~$5), a USB data cable, AirPlay, Bluetooth pairing and cloud API access**. USB powers/flashes the board; input reaches the iPad over Bluetooth. No GPIO wiring or iPad app installation is required. Mac command-line developer tools are needed for the receiver/local OCR.
 
